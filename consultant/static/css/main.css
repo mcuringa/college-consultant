@@ -1,4 +1,18 @@
 /* main styles for college consultant */
 
+@font-face:
+{
+  font-family:"Hansen";
+  src: url(consultantfont/hansen.ttf);
+}
+
+
+body
+{
+  background-color: #5FC0CE;
+  background-repeat: no-repeat;
+  background-position: center 300px;
+}
+
 
 
