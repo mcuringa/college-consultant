@@ -1,5 +1,31 @@
 /* main styles for college consultant */
 
+@font-face:
+{
+  font-family:"College";
+  src: url(static/css/fonts/college.ttf);
+}
+
+@font-face:
+{
+  font-family:"Angsa";
+  src: url(static/css/fonts/Angsa.ttf);
+}
+
+
+body
+{
+  background-color: #5FC0CE;
+  background-repeat: no-repeat;
+  background-position: center 300px;
+}
+
+links
+{
+  font-family: "Angsa";
+  font-color: black;
+  display: inline block;
+}
 
 
 
