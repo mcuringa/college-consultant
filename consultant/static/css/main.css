@@ -2,16 +2,28 @@
 
 @font-face:
 {
-  font-family:"College";
-  src: url(static/css/fonts/college.ttf);
+  font-family: 'College';
+  src: url('/static/css/fonts/college.ttf');
 }
 
 @font-face:
 {
-  font-family:"Angsa";
-  src: url(static/css/fonts/Angsa.ttf);
+  font-family: 'Angsa';
+  src: url('/static/css/fonts/Angsa.ttf');
 }
 
+header
+{
+	font-family: Angsa;
+	font-size: 100px;
+	text-align: center;
+}
+
+h1
+{
+	font-size: 30px;
+	text-align: center;
+}
 
 body
 {
@@ -27,5 +39,10 @@ links
   display: inline block;
 }
 
+#map
+{
+	width: 50%;
+	margin: 0 auto;
+}
 
 
