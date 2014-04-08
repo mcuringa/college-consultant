@@ -39,10 +39,11 @@ links
   display: inline block;
 }
 
-#map
+#mapdiv
 {
-	width: 50%;
-	margin: 0 auto;
+	width: 800px;
+  height: 600px;
+	padding: 10px;
 }
 
 
