@@ -3,30 +3,44 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 
 def home(request):
-    """The home page"""
+    """The about us link"""
+    
+    majors = {"education":  ("Adelphi", "Molloy", "Queens"), "psychology": ()}
+    
+    context = {}
+    
+    if majors == "education":
+        context[key] = value
         
     return render(request, 'home.html')
     
 
-def link1(request):
-    """The first test link"""
+def about_us(request):
+    """The about us link"""
     
-    return render(request, 'link1.html')
+    return render(request, 'about_us.html')
     
 
-def link2(request):
-    """The second test link"""
+def quick_facts(request):
+    """The quick facts link"""
     
-    return render(request, 'link2.html')
-    
-    
-def link3(request):
-    """The third test link"""
-    
-    return render(request, 'link3.html')
+    return render(request, 'quick_facts.html')
     
     
-def link4(request):
-    """The fourth test link"""
+def search(request):
+    """The search link"""
     
-    return render(request, 'link4.html')
+    return render(request, 'search.html')
+    
+    
+def contact_us(request):
+    """The contact us link"""
+    
+    return render(request, 'contact_us.html')
+    
+def quiz(request):
+    """The quiz link"""
+    
+    return render(request, 'quiz.html')
+    
+    
