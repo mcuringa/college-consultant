@@ -46,4 +46,61 @@ links
 	padding: 10px;
 }
 
+#logo img
+{
+  float:left;
+}
 
+#links
+{
+  text-align:center;
+  font-size: 18px;
+  height: auto;
+  margin: 0px 300px 0px 300px;
+  background-color: #FFFFFF;
+  opacity: 0.5;
+  
+}
+
+#links a:link, a:visited
+{
+  text-align:center;
+  text-decoration: none; 
+  font-size: 20px;
+  height: auto;
+  margin: auto;
+  font-family: Papyrus;
+  font-weight: bold;
+  color: #0A0A2A;
+  padding: 0 .75em;
+  
+}
+
+#links a:hover 
+{
+  text-decoration: none; 
+  color: #0080FF;
+  font-family: Papyrus;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+#home_map img
+{
+  display: block;
+  margin: auto;
+  padding-top: 0px;
+  padding-bottom: 4px;
+  clear: left;
+  width: 750px;
+}
+
+#home_quote
+{
+  text-align: center;
+  width: 100%;
+  font-family: Papyrus;
+  font-weight: bold;
+  font-size: 20px;
+}

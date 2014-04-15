@@ -4,51 +4,30 @@
     <title>{% block title %}the title{% endblock %}</title>
     <meta charset="utf-8" />
     <link href="/static/css/main.css" type="text/css" rel="stylesheet">
-</head>
+<script src="/static/ammap/ammap.js" type="text/javascript"></script>
+
+<script src="/static/ammap/maps/js/usaLow.js" type="text/javascript"></script>
+    </head>
+<body>
+
+<section id="logo">
+<img src="/static/images/college_logo.png" alt="Site Logo">
+</section>
 
 <a name="top"></a> 
 <nav id = "links">
-    <a href= "#Home"></a>
-    <a href= "#About Us"></a>
-    <a href= "#Find A School"></a>
-    <a href= "#What to Look for When Picking a College"></a>
-    <a href= "#What's Your College Quiz?"></a>
-    <a href= "#Contact Us"></a>
+    <a href= "#Home">Home</a>
+    <a href= "#College Search">College Search</a>
+    <a href= "#Common Myths">Common Myths</a>
+    <a href= "#About Us">About Us</a>
+    <a href= "#Contact Us">Contact Us</a>
 </nav>
 
-<section id = "Home">
-<h2> 
 
-</h2>
-
-<section id = "About Us">
-<h2> 
-
-</h2>
-
-<section id = "Find A School">
-<h2> 
-
-</h2>
-
-<section id = "What to Look for When Picking a College">
-<h2> 
-
-</h2>
-
-<section id = "What's Your College Quiz">
-<h2> 
-
-</h2>
-
-<section id = "Contact Us">
-<h2> 
-
-</h2>
-
-<body>
     {% block body %}the body goes here{% endblock %}
+    
+<a href="#top">TOP OF PAGE</a>   
+ 
 </body>
 
-<a href="#top">TOP OF PAGE</a>
 </html>

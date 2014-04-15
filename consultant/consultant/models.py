@@ -16,6 +16,7 @@ class School(models.Model):
 
 class Facts(models.Model):
 
+<<<<<<< HEAD
 	fact = models.TextField()
 	is_true = models.Boolean(default=True)
 	correct_count = models.IntergerField()
@@ -26,3 +27,14 @@ class About_Me(models.Model):
   name = models.TextField()
   school_attended = models.TextField()
   bio = models.TextField()
+=======
+    myth = models.TextField()
+    is_true = models.Boolean()
+    correct_count = models.IntergerField()
+    wrong_count = models.IntergerField()
+
+class About_Me(models.Model):
+
+    name = models.TextField()
+    bio = models.TextField()
+>>>>>>> FETCH_HEAD
