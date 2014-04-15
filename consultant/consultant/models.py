@@ -20,3 +20,4 @@ class Myth(models.Model):
 	is_true = models.Boolean()
 	correct_count = models.IntergerField()
 	wrong_count = models.IntergerField()
+    

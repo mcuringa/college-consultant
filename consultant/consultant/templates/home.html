@@ -1,192 +1,24 @@
 {% extends "base.html" %}
 
+
+{% block title %}
+College Consultant
+{% endblock %}
+
+
+
+
 {% block body %}
 
-<!-- <img src = 'images/map_home.jpg' alt = 'Map of United States'/>
-<img src = 'images/'>
--->
+<section id="home_map">
+    <img src="/static/images/color_map_of_us.png" alt="Map of United States">
+</section>
 
-<script src="ammap/ammap.js" type="text/javascript"></script>
-
-<script src="ammap/maps/js/usaLow.js" type="text/javascript"></script>
-
-<div id="mapdiv" style="width: 800px; height: 600px;"></div>
-
-<script>
- // add all your code to this method, as this will ensure that page is loaded
-    AmCharts.ready(function() {
-        // create AmMap object
-        var map = new AmCharts.AmMap();
-        // set path to images
-        map.pathToImages = "ammap/images/";
-
-        /* create data provider object
-         map property is usually the same as the name of the map file.
-
-         getAreasFromMap indicates that amMap should read all the areas available
-         in the map data and treat them as they are included in your data provider.
-         in case you don't set it to true, all the areas except listed in data
-         provider will be treated as unlisted.
-        */
-        var dataProvider = {
-            map: "usaLow",
-            getAreasFromMap:true                    
-        }; 
-        // pass data provider to the map object
-        map.dataProvider = dataProvider;
-
-        /* create areas settings
-         * autoZoom set to true means that the map will zoom-in when clicked on the area
-         * selectedColor indicates color of the clicked area.
-         */
-        map.areasSettings = {
-            autoZoom: true,
-            selectedColor: "#CC0000"
-        };
-
-        // let's say we want a small map to be displayed, so let's create it
-        map.smallMap = new AmCharts.SmallMap();
-
-        // write the map to container div
-        map.write("mapdiv");
-    });
-</script>
-
-<form action="file:///C:/Users/Kimberly/Documents/GitHub/college-consultant/consultant/consultant/templates/home.html">
-    <fieldset>
-        <legend>Type of school:</legend>
-            <br/>
-            <input type="checkbox" name="type"
-                value="two_year" /> Two Year
-            <input type="checkbox" name="type"
-                value="four_year" /> Four Year
-            <input type="checkbox" name="type"
-                value="public" /> Public
-            <input type="checkbox" name="type"
-                value="private" /> Private
-    </fieldset>
-    
-    <fieldset>
-        <legend>School Size:</legend>
-            <br/>
-            <input type="checkbox" name="size"
-                value="<2000" /> < 2,000
-            <input type="checkbox" name="size"
-                value="2,000-15,000" /> 2,000-15,000
-            <input type="checkbox" name="size"
-                value=">15,000" /> 15,000
-    </fieldset>
-    
-    <fieldset>
-        <legend>Gender:</legend>
-            <br/>
-            <input id="coed" type="radio" name="gender"
-                value="c">
-            <label for="coed">Coed</label>
-            <input id="all_women" type="radio" name="gender"
-                value="w">
-            <label for="all_women">All Women</label>
-            <input id="all_men" type="radio" name="gender"
-                value="m">
-            <label for="all_men">All Men</label>
-    </fieldset>
-    
-    <fieldset>
-        <legend>Location:</legend>
-            <p>Within how many miles from home (or other location) do you prefer to be?:
-                <select name="distance">
-                    <option value="20_miles">20 miles</option>
-                    <option value="50_miles">50 miles</option>
-                    <option value="100_miles">100 miles</option>
-                    <option value="no_preference">No preference</option>
-                </select>
-            </p>
-        <label>Zip code: <input type="text" name="zip_code" placeholder="Enter Zip code"/></label>
-        <p>OR</p>
-        <label>State: <input type="text" name="state" placeholder="Enter State"/></label>
-    </fieldset>
-    
-    <fieldset>
-        <legend>Campus:</legend>
-            <br/>
-            <input type="checkbox" name="campus"
-                value="rural" /> Rural
-            <input type="checkbox" name="campus"
-                value="suburban" /> Suburban
-            <input type="checkbox" name="campus"
-                value="urban" /> Urban
-            <input type="checkbox" name="campus"
-                value="residential" /> Residential
-            <input type="checkbox" name="campus"
-                value="commuter" /> Commuter
-    </fieldset>
-    
-    <fieldset>
-        <legend>Majors and Learning Environment:</legend>
-            <p>Major:</p>
-                <select name="major">
-                    <option value="accounting">Accounting</option>
-                    <option value="bio/biotech">Biology/Biotechnology</option>
-                    <option value="business">Business</option>
-                    <option value="comm/journal">Communication/Journalism</option>
-                    <option value="compsci/comptech">Computer Science/Computer Technology</option>
-                    <option value="criminal_justice">Criminal Justice</option>
-                    <option value="education">Education</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="nursing">Nursing</option>
-                    <option value="polysci/socio">Political Science/Sociology</option>
-                    <option value="psych/couns">Psychology/Counseling</option>
-                </select>
-    
-                <p>Study Options:</p>
-            <input type="checkbox" name="study"
-                value="honors_program" /> Honors Program
-            <input type="checkbox" name="study"
-                value="rotc" /> ROTC
-            <input type="checkbox" name="study"
-                value="study_abroad" /> Study Abroad
-            <input type="checkbox" name="study"
-                value="teacher_cert" /> Teacher Certification
-    </fieldset>
-    
-    <fieldset>
-        <legend>Sports and Activities:</legend>
-            <p>Sports:</p>
-                <select name="sports">
-                    <option value="baseball">Baseball</option>
-                    <option value="basketball">Basketball</option>
-                    <option value="bowling">Bowling</option>
-                    <option value="cross_country">Cross Country</option>
-                    <option value="football">Football</option>
-                    <option value="golf">Golf</option>
-                    <option value="gymnastics">Gymnastics</option>
-                    <option value="ice_hockey">Ice Hockey</option>
-                    <option value="lacrosse">Lacrosse</option>
-                    <option value="soccer">Soccer</option>
-                    <option value="softball">Softball</option>
-                    <option value="swimming">Swimming</option>
-                    <option value="tennis">Tennis</option>
-                    <option value="track_field">Track & Field</option>
-                    <option value="volleyball">Volleyball</option>
-                    <option value="wrestling">Wrestling</option>
-                </select>
-    
-            <p>Activities:</p>
-            <input type="checkbox" name="study"
-                value="student_newspaper" /> Student Newspaper
-            <input type="checkbox" name="study"
-                value="tv" /> TV Station
-            <input type="checkbox" name="study"
-                value="drama_theater" /> Drama/Theater
-            <input type="checkbox" name="study"
-                value="marching_band" /> Marching Band
-            <input type="checkbox" name="study"
-                value="radio" /> Radio Station
-            <input type="checkbox" name="study"
-                value="fraternities" /> Fraternities
-            <input type="checkbox" name="study"
-                value="sororities" /> Sororities
-</form>
-
+<section id="home_quote">
+    <p>"The future belongs to those who believe in the beauty of their dreams." </p>
+    <p>- Eleanor Roosevelt</p>
+</section>
 
 {% endblock %}
+
+
