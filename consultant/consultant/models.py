@@ -16,16 +16,12 @@ class School(models.Model):
 
 class Myth(models.Model):
 
-	myth = models.TextField()
-	is_true = models.Boolean()
-	correct_count = models.IntergerField()
-	wrong_count = models.IntergerField()
-<<<<<<< HEAD
-    
-=======
+    myth = models.TextField()
+    is_true = models.Boolean()
+    correct_count = models.IntergerField()
+    wrong_count = models.IntergerField()
 
 class About_Me(models.Model):
 
-  name = models.TextField()
-  bio = models.TextField()
->>>>>>> 4ce96e3451e5abf5f6b1fb674cadea7711527066
+    name = models.TextField()
+    bio = models.TextField()
