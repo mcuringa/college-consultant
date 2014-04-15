@@ -20,4 +20,12 @@ class Myth(models.Model):
 	is_true = models.Boolean()
 	correct_count = models.IntergerField()
 	wrong_count = models.IntergerField()
+<<<<<<< HEAD
     
+=======
+
+class About_Me(models.Model):
+
+  name = models.TextField()
+  bio = models.TextField()
+>>>>>>> 4ce96e3451e5abf5f6b1fb674cadea7711527066
