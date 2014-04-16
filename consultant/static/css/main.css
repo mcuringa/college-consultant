@@ -19,10 +19,17 @@ header
 	text-align: center;
 }
 
+#about_us
+{
+	background-color: ;
+}
+
 h1
 {
+	font-family: ;
 	font-size: 30px;
-	text-align: center;
+	text-align: align-left;
+	color: ;
 }
 
 body
