@@ -24,7 +24,7 @@ def college_form(request):
 def college_search(request):
     """The search link"""
     
-    return render(request, 'college_search.html')
+    return render(request, 'school_survey.html')
     
 
 def common_myths(request):
