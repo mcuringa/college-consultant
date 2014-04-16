@@ -1,4 +1,7 @@
-<form action="file:///C:/Users/Kimberly/Documents/GitHub/college-consultant/consultant/consultant/templates/school_survey_admin.html">
+{% extends "base.html" %}
+
+{% block body %}
+<form action="">
     
     <fieldset>
         <legend>Name of School:</legend>
@@ -52,13 +55,13 @@
     <fieldset>
         <legend>Campus Location:</legend>
             <br/>
-            <input id="rural" type="radio" name="campus_location"
+            <input id="rural" type="radio" name="location"
                 value="1">
             <label for="rural">Rural</label>
-            <input id="suburban" type="radio" name="campus_location"
+            <input id="suburban" type="radio" name="location"
                 value="2">
             <label for="suburban">Suburban</label>
-            <input id="urban" type="radio" name="campus_location"
+            <input id="urban" type="radio" name="location"
                 value="3">
             <label for="urban">Urban</label>
     </fieldset>
@@ -139,3 +142,5 @@
             <input type="checkbox" name="study"
                 value="sororities" /> Sororities
 </form>
+
+{% endblock %}

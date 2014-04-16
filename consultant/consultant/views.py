@@ -16,6 +16,10 @@ def home(request):
         
     return render(request, 'home.html')
 
+def college_form(request):
+    """Enter a new college"""
+    
+    return render(request, 'school_survey_admin.html')
     
 def college_search(request):
     """The search link"""
