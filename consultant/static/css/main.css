@@ -32,11 +32,19 @@ h1
   color: ;
 }
 
+html {
+    width: 100%;
+}
+
 body
 {
+  width: 100%;
   background-color: #5FC0CE;
   background-repeat: no-repeat;
   background-position: center 300px;
+  min-width: 1200px;
+  width: auto !important;
+  width: 1200px;
 }
 
 links
@@ -93,17 +101,28 @@ links
 }
 
 
-#home_map img
+#college_collage img
 {
-  display: inline;
-  margin: 30px 20px 5px 55px;
+  display: block;
+  margin: 0px auto;
   padding: 0px;
   clear: left;
-  width: 700px;
+  width: 1200px;
 }
 
-#home_quote
+#home_quote h2
 {
+  text-align: center;
+  width: 100%;
+  font-family: Papyrus;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+}
+
+#home_quote p
+{
+  margin: 0;
   text-align: center;
   width: 100%;
   font-family: Papyrus;
