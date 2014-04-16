@@ -60,10 +60,10 @@ links
 
 #links
 {
-  text-align:center;
+  text-align:left;
   font-size: 18px;
   height: auto;
-  margin: 0px 300px 0px 300px;
+  margin: 0px 0px 0px 0px;
   background-color: #FFFFFF;
   opacity: 0.5;
   
@@ -71,7 +71,7 @@ links
 
 #links a:link, a:visited
 {
-  text-align:center;
+  text-align:left;
   text-decoration: none; 
   font-size: 20px;
   height: auto;
@@ -79,7 +79,7 @@ links
   font-family: Papyrus;
   font-weight: bold;
   color: #0A0A2A;
-  padding: 0 .75em;
+  padding: 0 1em;
   
 }
 
@@ -95,12 +95,11 @@ links
 
 #home_map img
 {
-  display: block;
-  margin: auto;
+  display: inline;
+  margin: 30px 20px 5px 55px;
   padding: 0px;
   clear: left;
   width: 700px;
-  
 }
 
 #home_quote
