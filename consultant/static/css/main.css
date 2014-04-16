@@ -14,22 +14,22 @@
 
 header
 {
-	font-family: Angsa;
-	font-size: 100px;
-	text-align: center;
+  font-family: Angsa;
+  font-size: 100px;
+  text-align: center;
 }
 
 #about_us
 {
-	background-color: ;
+  background-color: ;
 }
 
 h1
 {
-	font-family: ;
-	font-size: 30px;
-	text-align: align-left;
-	color: ;
+  font-family: ;
+  font-size: 30px;
+  text-align: align-left;
+  color: ;
 }
 
 body
@@ -48,9 +48,9 @@ links
 
 #mapdiv
 {
-	width: 800px;
+  width: 800px;
   height: 600px;
-	padding: 10px;
+  padding: 10px;
 }
 
 #logo img
@@ -97,10 +97,10 @@ links
 {
   display: block;
   margin: auto;
-  padding-top: 0px;
-  padding-bottom: 4px;
+  padding: 0px;
   clear: left;
-  width: 750px;
+  width: 700px;
+  
 }
 
 #home_quote
