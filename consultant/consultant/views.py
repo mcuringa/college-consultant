@@ -1,32 +1,51 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 
+#def save_school(request):
+    
 
 def home(request):
-    """The home page"""
+    """The about us link"""
+    
+    majors = {"education":  ("Adelphi", "Molloy", "Queens"), "psychology": ()}
+    
+    context = {}
+    
+    if majors == "education":
+        context[key] = value
         
     return render(request, 'home.html')
+
+def college_form(request):
+    """Enter a new college"""
+    
+    return render(request, 'school_survey_admin.html')
+    
+def college_search(request):
+    """The search link"""
+    
+    return render(request, 'school_survey.html')
     
 
-def link1(request):
-    """The first test link"""
+def common_myths(request):
+    """The quick facts link"""
     
-    return render(request, 'link1.html')
-    
+    return render(request, 'common_myths.html')   
 
-def link2(request):
-    """The second test link"""
+ 
     
-    return render(request, 'link2.html')
+def about_us(request):
+    """The about us link"""
     
-    
-def link3(request):
-    """The third test link"""
-    
-    return render(request, 'link3.html')
+    return render(request, 'about_us.html')
     
     
-def link4(request):
-    """The fourth test link"""
+def contact_us(request):
+    """The contact us link"""
     
-    return render(request, 'link4.html')
+    return render(request, 'contact_us.html')
+    
+    
+    #return render(request, 'save_school.html')
+
+

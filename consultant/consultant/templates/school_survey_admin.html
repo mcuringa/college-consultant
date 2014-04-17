@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form action="">
+    
+    <fieldset>
+        <legend>Name of School:</legend>
+        <label>Name of School: <input type="text" name="school_name" placeholder="Name of School"/></label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Length of Study:</legend>
+            <br/>
+            <input id="four_year" type="radio" name="study"
+                value="true">
+            <label for="four_year">Four Year</label>
+            <input id="two_year" type="radio" name="study"
+                value="false">
+            <label for="two_year">Two Year</label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Type of School:</legend>
+            <br/>
+            <input id="public" type="radio" name="type"
+                value="true">
+            <label for="public">Four Year</label>
+            <input id="private" type="radio" name="type"
+                value="false">
+            <label for="private">Two Year</label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>School Size:</legend>
+        <label>Preferred Size of School: <input type="text" name="school_size" placeholder="Enter Size"/></label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Gender of School:</legend>
+        <label>Enter co-ed, female, or male (choose only one): <input type="text" name="school_name" placeholder="Enter Preferred Gender"/></label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Campus:</legend>
+            <br/>
+            <p>Residential or Commuter?:</p>
+            <input id="residential" type="radio" name="campus"
+                value="true">
+            <label for="residential">Residential</label>
+            <input id="commuter" type="radio" name="campus"
+                value="false">
+            <label for="commuter">Commuter</label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Campus Location:</legend>
+            <br/>
+            <input id="rural" type="radio" name="location"
+                value="1">
+            <label for="rural">Rural</label>
+            <input id="suburban" type="radio" name="location"
+                value="2">
+            <label for="suburban">Suburban</label>
+            <input id="urban" type="radio" name="location"
+                value="3">
+            <label for="urban">Urban</label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Location of School:</legend>
+        <label>Zip code: <input type="text" name="zip_code" placeholder="Enter Zip code"/></label>
+        <p>OR</p>
+        <label>State: <input type="text" name="state" placeholder="Enter State"/></label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Majors and Learning Environment:</legend>
+            <p>Major:</p>
+                <select name="major">
+                    <option value="accounting">Accounting</option>
+                    <option value="bio/biotech">Biology/Biotechnology</option>
+                    <option value="business">Business</option>
+                    <option value="comm/journal">Communication/Journalism</option>
+                    <option value="compsci/comptech">Computer Science/Computer Technology</option>
+                    <option value="criminal_justice">Criminal Justice</option>
+                    <option value="education">Education</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="nursing">Nursing</option>
+                    <option value="polysci/socio">Political Science/Sociology</option>
+                    <option value="psych/couns">Psychology/Counseling</option>
+                </select>
+    
+                <p>Study Options:</p>
+            <input type="checkbox" name="study"
+                value="honors_program" /> Honors Program
+            <input type="checkbox" name="study"
+                value="rotc" /> ROTC
+            <input type="checkbox" name="study"
+                value="study_abroad" /> Study Abroad
+            <input type="checkbox" name="study"
+                value="teacher_cert" /> Teacher Certification
+    </fieldset>
+    
+    <fieldset>
+        <legend>Sports and Activities:</legend>
+            <p>Sports:</p>
+                <select name="sports">
+                    <option value="baseball">Baseball</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="bowling">Bowling</option>
+                    <option value="cross_country">Cross Country</option>
+                    <option value="fencing">Fencing</option>
+                    <option value="field_hockey">Field Hockey</option>
+                    <option value="football">Football</option>
+                    <option value="golf">Golf</option>
+                    <option value="gymnastics">Gymnastics</option>
+                    <option value="ice_hockey">Ice Hockey</option>
+                    <option value="lacrosse">Lacrosse</option>
+                    <option value="rowing">Rowing/Crew</option>
+                    <option value="soccer">Soccer</option>
+                    <option value="softball">Softball</option>
+                    <option value="swimming">Swimming</option>
+                    <option value="tennis">Tennis</option>
+                    <option value="track_field">Track & Field</option>
+                    <option value="volleyball">Volleyball</option>
+                    <option value="wrestling">Wrestling</option>
+                </select>
+    
+            <p>Activities:</p>
+            <input type="checkbox" name="study"
+                value="student_newspaper" /> Student Newspaper
+            <input type="checkbox" name="study"
+                value="tv" /> TV Station
+            <input type="checkbox" name="study"
+                value="drama_theater" /> Drama/Theater
+            <input type="checkbox" name="study"
+                value="marching_band" /> Marching Band
+            <input type="checkbox" name="study"
+                value="radio" /> Radio Station
+            <input type="checkbox" name="study"
+                value="fraternities" /> Fraternities
+            <input type="checkbox" name="study"
+                value="sororities" /> Sororities
+</form>
+
+{% endblock %}

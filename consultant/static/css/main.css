@@ -14,22 +14,37 @@
 
 header
 {
-	font-family: Angsa;
-	font-size: 100px;
-	text-align: center;
+  font-family: Angsa;
+  font-size: 100px;
+  text-align: center;
+}
+
+#about_us
+{
+  background-color: ;
 }
 
 h1
 {
-	font-size: 30px;
-	text-align: center;
+  font-family: ;
+  font-size: 30px;
+  text-align: align-left;
+  color: ;
+}
+
+html {
+    width: 100%;
 }
 
 body
 {
+  width: 100%;
   background-color: #5FC0CE;
   background-repeat: no-repeat;
   background-position: center 300px;
+  min-width: 1200px;
+  width: auto !important;
+  width: 1200px;
 }
 
 links
@@ -39,10 +54,83 @@ links
   display: inline block;
 }
 
-#map
+#mapdiv
 {
+<<<<<<< HEAD
 	width: 675px;
 	margin: 0 auto;
+=======
+  width: 800px;
+  height: 600px;
+  padding: 10px;
+>>>>>>> FETCH_HEAD
+}
+
+#logo img
+{
+  float:left;
+}
+
+#links
+{
+  text-align:left;
+  font-size: 18px;
+  height: auto;
+  margin: 0px 0px 0px 0px;
+  background-color: #FFFFFF;
+  opacity: 0.5;
+  
+}
+
+#links a:link, a:visited
+{
+  text-align:left;
+  text-decoration: none; 
+  font-size: 20px;
+  height: auto;
+  margin: auto;
+  font-family: Papyrus;
+  font-weight: bold;
+  color: #0A0A2A;
+  padding: 0 1em;
+  
+}
+
+#links a:hover 
+{
+  text-decoration: none; 
+  color: #0080FF;
+  font-family: Papyrus;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 
+#college_collage img
+{
+  display: block;
+  margin: 0px auto;
+  padding: 0px;
+  clear: left;
+  width: 1200px;
+}
+
+#home_quote h2
+{
+  text-align: center;
+  width: 100%;
+  font-family: Papyrus;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+}
+
+#home_quote p
+{
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  font-family: Papyrus;
+  font-weight: bold;
+  font-size: 20px;
+}
