@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^about_us', 'consultant.views.about_us', ),
     url(r'^contact_us', 'consultant.views.contact_us', ),
     url(r'^new_college', 'consultant.views.college_form', ),
+    url(r'^save_school$', 'consultant.views.save_school'),
 )
