@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
 {% block body %}
-<form action="">
-    
+<form action="/save_school" method="POST">
+    {% csrf_token %}
     <fieldset>
         <legend>Name of School:</legend>
-        <label>Name of School: <input type="text" name="school_name" placeholder="Name of School"/></label>
+        <label>Name of School: <input type="text" name="name" placeholder="Name of School"/></label>
     </fieldset>
     
     <fieldset>
         <legend>Length of Study:</legend>
             <br/>
-            <input id="four_year" type="radio" name="study"
-                value="true">
+            <input id="four_year" type="radio" name="is_four_year"
+                value="True">
             <label for="four_year">Four Year</label>
-            <input id="two_year" type="radio" name="study"
-                value="false">
+            <input id="two_year" type="radio" name="is_four_year"
+                value="False">
             <label for="two_year">Two Year</label>
     </fieldset>
     
@@ -140,7 +140,17 @@
             <input type="checkbox" name="study"
                 value="fraternities" /> Fraternities
             <input type="checkbox" name="study"
-                value="sororities" /> Sororities
-</form> -->
+                value="sororities" /> Sororities -->
+                
+    <input type="submit" >
+</form>
+
+        {% for school in schools %}
+            <tr>
+                <td><em>{{school.title}}</em></td>
+                <td>{{school.name}}</td>
+                <td>{{school.is_four_year}}</td>
+            </tr>
+        {% endfor %}
 
 {% endblock %}
