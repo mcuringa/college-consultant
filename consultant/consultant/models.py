@@ -6,8 +6,8 @@ class School(models.Model):
 
   name = models.CharField(max_length=500)
   is_four_year = models.BooleanField(default=True)
-  # is_public = models.BooleanField(default=True)
-  # population = models.IntergerField()
+  is_public = models.BooleanField(default=True)
+  #school_size = models.IntergerField()
   # gender = models.CharField(max_length=6)
   # location = models.IntergerField(default=0)
   # resident = models.BooleanField(default=True)

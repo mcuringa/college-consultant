@@ -19,22 +19,22 @@
             <label for="two_year">Two Year</label>
     </fieldset>
     
-<!--     <fieldset>
+    <fieldset>
         <legend>Type of School:</legend>
             <br/>
-            <input id="public" type="radio" name="type"
-                value="true">
-            <label for="public">Four Year</label>
-            <input id="private" type="radio" name="type"
-                value="false">
-            <label for="private">Two Year</label>
+            <input id="public" type="radio" name="is_public"
+                value="True">
+            <label for="public">Public</label>
+            <input id="private" type="radio" name="is_public"
+                value="False">
+            <label for="private">Private</label>
     </fieldset>
-    
+<!--     
     <fieldset>
         <legend>School Size:</legend>
-        <label>Preferred Size of School: <input type="text" name="school_size" placeholder="Enter Size"/></label>
+        <label>Size of School: <input type="text" name="school_size" placeholder="Enter Size"/></label>
     </fieldset>
-    
+   
     <fieldset>
         <legend>Gender of School:</legend>
         <label>Enter co-ed, female, or male (choose only one): <input type="text" name="school_name" placeholder="Enter Preferred Gender"/></label>
@@ -150,6 +150,7 @@
                 <td><em>{{school.title}}</em></td>
                 <td>{{school.name}}</td>
                 <td>{{school.is_four_year}}</td>
+                <td>{{school.is_public}}</td>
             </tr>
         {% endfor %}
 
