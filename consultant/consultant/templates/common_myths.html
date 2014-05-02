@@ -9,6 +9,36 @@ Common Myths
 
 
 <h1> Myths about College Life: Fact or Fiction? </h1>
-<p> ENTER TEXT HERE </p>
+<h3> 1. I need to choose my major before I start college. </h3>
+<div class="SwitchBtn" >                    
+    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
+    <div class = "transitionSwitch">
+        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
+        <div class = "slider_label off" id = "labelForSwitch" >
+            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
+            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
+        </div>
+    </div>              
+</div>
+<p>You do not need to declare a major before you start college, in fact many students enter college without declaring a major. If you are undecided when starting school, take classes in all different areas to help make up your mind. </p>
+<h3> 2. Dining Hall food is always horrible</h3>
+<p>Much like you get tired of eating the same foods at home every night
 
+
+
+      <script type="text/javascript">
+        function toggleStandBy()
+{    
+     if($(this).name == "TurnOn")
+     {  
+          $(this).name = "TurnOff";
+            }
+      else if($(this).name == "TurnOff")
+      {         
+                $(this).name = "TurnOn";
+       }
+    document.getElementById('checkboxForSwitch').checked = !document.getElementById('checkboxForSwitch').checked;
+      }
+      
+      </script>
 {% endblock %}
