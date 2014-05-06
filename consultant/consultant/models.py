@@ -7,13 +7,12 @@ class School(models.Model):
   name = models.CharField(max_length=500)
   is_four_year = models.BooleanField(default=True)
   is_public = models.BooleanField(default=True)
-  #school_size = models.IntergerField()
-  # gender = models.CharField(max_length=6)
-  # location = models.IntergerField(default=0)
-  # resident = models.BooleanField(default=True)
-  # zip_code = models.IntergerField(max_length=5)
-  # state = models.CharField(max_length=2)
-
+  school_size = models.IntegerField()
+  school_gender = models.IntegerField()
+  is_residential = models.BooleanField(default=True)
+  location_type = models.IntegerField()
+  location_state = models.CharField(max_length=500)
+  majors = models.IntegerField()
 class SchoolForm(ModelForm):
     """A ModelForm to hold our schools"""
     class Meta:

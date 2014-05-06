@@ -29,67 +29,74 @@
                 value="False">
             <label for="private">Private</label>
     </fieldset>
-<!--     
+     
     <fieldset>
         <legend>School Size:</legend>
         <label>Size of School: <input type="text" name="school_size" placeholder="Enter Size"/></label>
     </fieldset>
-   
+  
     <fieldset>
         <legend>Gender of School:</legend>
-        <label>Enter co-ed, female, or male (choose only one): <input type="text" name="school_name" placeholder="Enter Preferred Gender"/></label>
+        <label>Enter: 0 (co-ed), 1 (all girls), or 2 (all boys) (choose only one number): <input type="text" name="school_gender" placeholder="Enter Gender"/></label>
     </fieldset>
-    
+     
     <fieldset>
         <legend>Campus:</legend>
-            <br/>
             <p>Residential or Commuter?:</p>
-            <input id="residential" type="radio" name="campus"
-                value="true">
+            <input id="residential" type="radio" name="is_residential"
+                value="True">
             <label for="residential">Residential</label>
-            <input id="commuter" type="radio" name="campus"
-                value="false">
+            <input id="commuter" type="radio" name="is_residential"
+                value="False">
             <label for="commuter">Commuter</label>
     </fieldset>
     
     <fieldset>
         <legend>Campus Location:</legend>
             <br/>
-            <input id="rural" type="radio" name="location"
-                value="1">
+            <input id="rural" type="radio" name="location_type"
+                value="0">
             <label for="rural">Rural</label>
-            <input id="suburban" type="radio" name="location"
-                value="2">
+            <input id="suburban" type="radio" name="location_type"
+                value="1">
             <label for="suburban">Suburban</label>
-            <input id="urban" type="radio" name="location"
-                value="3">
+            <input id="urban" type="radio" name="location_type"
+                value="2">
             <label for="urban">Urban</label>
     </fieldset>
     
     <fieldset>
         <legend>Location of School:</legend>
-        <label>Zip code: <input type="text" name="zip_code" placeholder="Enter Zip code"/></label>
-        <p>OR</p>
-        <label>State: <input type="text" name="state" placeholder="Enter State"/></label>
+        <label>State: <input type="text" name="location_state" placeholder="Enter State"/></label>
     </fieldset>
     
     <fieldset>
-        <legend>Majors and Learning Environment:</legend>
-            <p>Major:</p>
-                <select name="major">
-                    <option value="accounting">Accounting</option>
-                    <option value="bio/biotech">Biology/Biotechnology</option>
-                    <option value="business">Business</option>
-                    <option value="comm/journal">Communication/Journalism</option>
-                    <option value="compsci/comptech">Computer Science/Computer Technology</option>
-                    <option value="criminal_justice">Criminal Justice</option>
-                    <option value="education">Education</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="nursing">Nursing</option>
-                    <option value="polysci/socio">Political Science/Sociology</option>
-                    <option value="psych/couns">Psychology/Counseling</option>
+        <legend>Majors:</legend>
+            <p>Choose all Majors that Apply:</p>
+                    <input type="checkbox" name="majors"
+                        value="0" /> Accounting
+                    <input type="checkbox" name="majors"
+                        value="1" /> Biology/Biotechnology
+                    <input type="checkbox" name="majors"
+                        value="2" /> Business
+                    <input type="checkbox" name="majors"
+                        value="3" /> Communication/Journalism
+                    <input type="checkbox" name="majors"
+                        value="4" /> Computer Science/Computer Technology
+                    <input type="checkbox" name="majors"
+                        value="5" /> Criminal Justice
+                    <input type="checkbox" name="majors"
+                        value="6" /> Education
+                    <input type="checkbox" name="majors"
+                        value="7" /> Marketing
+                    <input type="checkbox" name="majors"
+                        value="8" /> Nursing
+                    <input type="checkbox" name="majors"
+                        value="9" /> Political Science/Sociology
+                    <input type="checkbox" name="majors"
+                        value="10" /> Psychology/Counseling
                 </select>
-    
+<!-- Make this Learning Environment!!!!!!!!!!!!!!!!!!!!!  
                 <p>Study Options:</p>
             <input type="checkbox" name="study"
                 value="honors_program" /> Honors Program
@@ -149,8 +156,49 @@
             <tr>
                 <td><em>{{school.title}}</em></td>
                 <td>{{school.name}}</td>
-                <td>{{school.is_four_year}}</td>
-                <td>{{school.is_public}}</td>
+                <td>
+                  {% if school.is_four_year %}
+                    Four Year
+                  {% else %}
+                    Two Year
+                  {% endif %}
+                </td>
+                <td>{% if school.is_public %}</td>
+                    Public 
+                  {% else %}
+                    Private
+                  {% endif %}
+                </td>
+                <td>{{school.school_size}}</td>
+                <td>{% if school.school_gender == 0 %}</td>
+                    Co-ed
+                  {% elif school.school_gender == 1 %}
+                    All Girls
+                  {% elif school.school_gender == 2 %}
+                    All Boys
+                  {% endif %}
+                </td>
+                <td>
+                  {% if school.is_residential %}
+                    Residential
+                  {% else %}
+                    Commuter
+                  {% endif %}
+                </td>
+                <td>{% if school.location_type == 0 %}</td>
+                    Rural
+                  {% elif school.location_type == 1 %}
+                    Urban
+                  {% elif school.location_type == 2 %}
+                    Suburban
+                  {% endif %}
+                </td>
+                <td>{{school.location_state}}</td>      
+                <td>
+                  {% if request.method == "POST" %}
+                    request.POST.getlist("majors")
+                  {% endif %}
+                </td>
             </tr>
         {% endfor %}
 
