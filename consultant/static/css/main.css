@@ -19,10 +19,24 @@ header
   text-align: center;
 }
 
-#about_us
+#about_us h1
 {
-  font-size: 120px;
-  font-family: Trebuchet MS;
+  font-size: 110px;
+  font-family: College;
+  color; #FAFAFA;
+}
+
+#about_us h2
+{
+  font-size: 100px;
+  font-family: Arial;
+  color; #FAFAFA;
+}
+
+#about_us h3
+{
+  font-size: 90px;
+  font-family: Arial;
   color; #FAFAFA;
 }
 
