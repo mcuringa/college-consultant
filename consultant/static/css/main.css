@@ -21,23 +21,35 @@ header
 
 #about_us h1
 {
-  font-size: 110px;
+  font-size: 80px;
   font-family: College;
   color; #FAFAFA;
 }
 
 #about_us h2
 {
-  font-size: 100px;
+  font-size: 60px;
   font-family: Arial;
   color; #FAFAFA;
 }
 
 #about_us h3
 {
-  font-size: 90px;
+  font-size: 50px;
   font-family: Arial;
   color; #FAFAFA;
+}
+
+#about_us p
+{
+  font-size: 50px;
+  font-family: Arial;
+  color; #FAFAFA;
+}
+
+#about_us body
+{
+  background-color; #FAFAFA;
 }
 
 h1
