@@ -2,8 +2,8 @@
 
 @font-face:
 {
-  font-family: 'College';
-  src: url('/static/css/fonts/college.ttf');
+  font-family: 'crayon';
+  src: url('/static/css/fonts/Coolcrayon.ttf');
 }
 
 @font-face:
@@ -22,28 +22,28 @@ header
 #about_us h1
 {
   font-size: 60px;
-  font-family: College;
+  font-family: crayon;
   color; #FAFAFA;
 }
 
 #about_us h2
 {
   font-size: 25px;
-  font-family: Arial;
+  font-family: Rockwell;
   color; #FAFAFA;
 }
 
 #about_us h3
 {
-  font-size: 15px;
-  font-family: Arial;
+  font-size: 20px;
+  font-family: Perpetua;
   color; #FAFAFA;
 }
 
 #about_us p
 {
-  font-size: 50px;
-  font-family: Arial;
+  font-size: 20px;
+  font-family: Perpetua;
   color; #FAFAFA;
 }
 
