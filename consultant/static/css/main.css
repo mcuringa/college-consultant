@@ -22,29 +22,32 @@ header
 #about_us h1
 {
   font-size: 60px;
-  font-family: crayon;
-  color; #FAFAFA;
+  font-family: Angsa;
+  color: #FAFAFA;
 }
 
 #about_us h2
 {
   font-size: 25px;
   font-family: Rockwell;
-  color; #FAFAFA;
+  color: #FAFAFA;
+  float: right;
 }
 
 #about_us h3
 {
   font-size: 20px;
   font-family: Perpetua;
-  color; #FAFAFA;
+  color: #FAFAFA;
+  float: right;
 }
 
 #about_us p
 {
   font-size: 20px;
   font-family: Perpetua;
-  color; #FAFAFA;
+  color: #FAFAFA;
+  float: right;
 }
 
 #about_us body
