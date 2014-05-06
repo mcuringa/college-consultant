@@ -13,16 +13,17 @@ class School(models.Model):
   location_type = models.IntegerField()
   location_state = models.CharField(max_length=500)
   majors = models.IntegerField()
+  
 class SchoolForm(ModelForm):
     """A ModelForm to hold our schools"""
     class Meta:
         model = School
-		
+        
 class Contact(models.Model):
 
   name = models.CharField(max_length=20)
-  email = models.ChartField(max_length=50)
-  comments = models.ChartField(max_length=500)
+  email = models.CharField(max_length=50)
+  comments = models.CharField(max_length=500)
 
 class ContactForm(ModelForm):
     class Meta:
