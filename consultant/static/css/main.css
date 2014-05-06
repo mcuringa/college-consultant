@@ -2,13 +2,13 @@
 
 @font-face:
 {
-  font-family: 'crayon';
+  font-family: crayon;
   src: url('/static/css/fonts/Coolcrayon.ttf');
 }
 
 @font-face:
 {
-  font-family: 'Angsa';
+  font-family: Angsa;
   src: url('/static/css/fonts/Angsa.ttf');
 }
 
@@ -22,7 +22,7 @@ header
 #about_us h1
 {
   font-size: 60px;
-  font-family: Angsa;
+  font-family: crayon;
   color: #FAFAFA;
 }
 
@@ -51,7 +51,8 @@ header
 
 #about_us body
 {
-  background-color; #FAFAFA;
+  background-color: #FAFAFA;
+  padding: 5px 0;
 }
 
 h1
@@ -62,8 +63,9 @@ h1
   color: ;
 }
 
-html {
-    width: 100%;
+html
+{
+  width: 100%;
 }
 
 body
