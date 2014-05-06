@@ -31,7 +31,8 @@ header
   font-size: 25px;
   font-family: Rockwell;
   color: #FAFAFA;
-  float: right;
+  padding-right: 10em;
+  padding-left: 10em;
 }
 
 #about_us h3
@@ -39,7 +40,8 @@ header
   font-size: 20px;
   font-family: Perpetua;
   color: #FAFAFA;
-  float: right;
+  padding-right: 10em;
+  padding-left: 10em;
 }
 
 #about_us p
@@ -47,13 +49,8 @@ header
   font-size: 20px;
   font-family: Perpetua;
   color: #FAFAFA;
-  padding: ;
-}
-
-#about_us div.center
-{
-padding-right: 10em;
-padding-left: 10em;
+  padding-right: 10em;
+  padding-left: 10em;
 }
 
 #about_us body
