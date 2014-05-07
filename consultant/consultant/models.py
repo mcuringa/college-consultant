@@ -21,8 +21,8 @@ class SchoolForm(ModelForm):
 		
 class Contact(models.Model):
 
-  name = models.CharField(max_length=20)
-  email = models.ChartField(max_length=50)
+  name = models.CharField(max_length=50)
+  email = models.EmailField()
   comments = models.ChartField(max_length=500)
 
 class ContactForm(ModelForm):
