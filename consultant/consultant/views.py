@@ -40,7 +40,7 @@ def save_school(request):
 
     form = SchoolForm(request.POST)
     school = form.save()
-    majors = request.POST.getlist("majors")
+    
 
     # send them to the home page after saving
     # this will call views.home() from above

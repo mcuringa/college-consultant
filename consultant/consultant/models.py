@@ -2,6 +2,16 @@ from django.db import models
 from django import forms
 from django.forms import ModelForm
 
+class Major(models.Model):
+    name = models.CharField(max_length=200)
+    class Meta:
+        ordering = ('name',)
+        
+class Sport(models.Model):
+    name = models.CharField(max_length=200)
+    class Meta:
+        ordering = ('name',)
+
 class School(models.Model):
 
   name = models.CharField(max_length=500)
@@ -12,7 +22,8 @@ class School(models.Model):
   is_residential = models.BooleanField(default=True)
   location_type = models.IntegerField()
   location_state = models.CharField(max_length=500)
-  majors = models.IntegerField()
+  majors = models.ManyToManyField(Major)
+  sports = models.ManyToManyField(Sport)
   
 class SchoolForm(ModelForm):
     """A ModelForm to hold our schools"""
