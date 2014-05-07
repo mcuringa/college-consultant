@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+
+
 {% block title %}
 Common Myths
 {% endblock %}
@@ -7,138 +9,148 @@ Common Myths
 
 {% block body %}
 
+<style>
+
+.hidden
+{
+	display: none;
+}
+
+.wrong
+{
+	border: 1px solid red;
+}
+
+.correct
+{
+	border: 1px solid green;
+}
+</style>
+
 
 <h1> Myths about College Life: Fact or Fiction? </h1>
 <h3> 1. I need to choose my major before I start college. </h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>              
-</div>
-<p>You do not need to declare a major before you start college, in fact many students enter college without declaring a major. If you are undecided when starting school, take classes in all different areas to help make up your mind. </p>
-<h3> 2. It's better to get good grades in high school than take challenging courses. </h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>
-</div>
+        <legend>My answer is</legend>
+            <br/>
+            <input id="True1" type="radio" name="is_1" value="True">
+            <label for = "True1">True</Label>
+            <input id="False1" type="radio" name="is_1" value="False">
+            <label for = "False1">False</Label>
+            
+            
+<p class="hidden" id="fact1">You do not need to declare a major before you start college, in fact many students enter college without declaring a major. If you are undecided when starting school, take classes in all different areas to help make up your mind. </p>
+<
+
+h3> 2. It's better to get good grades in high school than take challenging courses. </h3>                  
+<legend>My answer is</legend>
+            <br/>
+            <input id="True2" type="radio" name="is_2" value="True">
+            <label for = "True2">True</Label>
+            <input id="False2" type="radio" name="is_2" value="False">
+            <label for = "False2">False</Label>
 <p>Even modest success in advanced or accelerated courses indicates to a college that you seek and can handle challenging courses -- like those you will find in college. A challenging college preparatory program or some advanced placement courses will help you get into more selective colleges.</p>
 <h3> 3. The standardized tests (ACT, PSAT, SAT) are not as important as your high school grades.</h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>   
-<p>Your performance in high school is a better predictor of college success than the standardized tests. Colleges know that. That does not mean that most colleges won't look at your SAT or ACT scores. Some state institutions where they have far more applicants than they can fairly assess may use scores to determine if you are eligible.</p>
+<legend>My answer is</legend>
+            <br/>
+            <input id="True3" type="radio" name="is_3" value="True">
+            <label for = "True3">True</Label>
+            <input id="False3" type="radio" name="is_3" value="False">
+            <label for = "False3">False</Label>
+<p class="hidden" id="fact3">Your performance in high school is a better predictor of college success than the standardized tests. Colleges know that. That does not mean that most colleges won't look at your SAT or ACT scores. Some state institutions where they have far more applicants than they can fairly assess may use scores to determine if you are eligible.</p>
+
 <h3> 4. You can't get into a selective college if you did poorly in ninth and tenth grade.</h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>   
+<legend>My answer is</legend>
+            <br/>
+            <input id="True4" type="radio" name="is_4" value="True">
+            <label for = "True4">True</Label>
+            <input id="False4" type="radio" name="is_4" value="False">
+            <label for = "False4">False</Label>
 <p>Colleges look for improvement in performance as a sign that you can and will do the work. In fact, a vast improvement as a junior and senior indicates to a college that you have settled down. However, do not expect to catch up for three poor years in one good semester as a senior.</p>
 <h3> 5.  If I haven't heard of a college or university, it can't be very good.</h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>   
+<legend>My answer is</legend>
+            <br/>
+            <input id="True5" type="radio" name="is_5" value="True">
+            <label for = "True5">True</Label>
+            <input id="False5" type="radio" name="is_5" value="False">
+            <label for = "False5">False</Label>
 <p>You may not hear of many of the nation's finest colleges until you are well into your adult life. Athletics on television is how most colleges get to be known, but many colleges do not get that kind of exposure. Some of the nation's finest colleges don't play big-time athletics. Judge a college on its own merits. Don't let name recognition determine a good or bad college.</p>
 <h3> 6.  A lot of out-of-class activities will not compensate for poor grades throughout your four years in high school.</h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>   
+<legend>My answer is</legend>
+            <br/>
+            <input id="True6" type="radio" name="is_6" value="True">
+            <label for = "True6">True</Label>
+            <input id="False6" type="radio" name="is_6" value="False">
+            <label for = "False6">False</Label>
 <p>Admittedly, colleges consider out-of-class activities such as athletics, student government, and music when they review an application. But colleges look at your academic performance first. You need to keep those grades up in school!</p>
 <h3> 7.  You should go to the most prestigious college to which you are admitted.</h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>   
+<legend>My answer is</legend>
+            <br/>
+            <input id="True7" type="radio" name="is_7" value="True">
+            <label for = "True7">True</Label>
+            <input id="False7" type="radio" name="is_7" value="False">
+            <label for = "False7">False</Label>
 <p>You should go to the college that "fits" you best. If it happens to be prestigious, that's fine. However, fit has to do with how you feel when you are on campus, the match with how you learn and how the professors teach, and the academic pressure you can handle. If the college and you are not a good match, you will be unhappy regardless of the prestige.</p>
 <h3> 8.  The best time to visit colleges is before you are admitted.</h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>   
+<legend>My answer is</legend>
+            <br/>
+            <input id="True8" type="radio" name="is_8" value="True">
+            <label for = "True8">True</Label>
+            <input id="False8" type="radio" name="is_8" value="False">
+            <label for = "False8">False</Label>
 <p>Yes. Visit before you apply and again after you have been admitted.  If you can visit only once, make it before you apply.</p>
 <h3> 9.   Your life will be ruined if you don't get admitted to your first choice college.</h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>   
+<legend>My answer is</legend>
+            <br/>
+            <input id="True9" type="radio" name="is_9" value="True">
+            <label for = "True9">True</Label>
+            <input id="False9" type="radio" name="is_9" value="False">
+            <label for = "False9">False</Label>
 <p>Thousands of students each year do not get admitted to their first choice college and most are happy, healthy individuals today. Yes, rejection is hard on your ego, but you will not be alone. Additionally, the vast majority of students who settle for their second choice end up happy at that institution anyway. Remember, college admissions, especially at the more selective colleges has to be subjective. With thousands of applications and only a small staff, it is impossible to assess each applicant objectively. Some applications stand out. Some don't.</p>
 <h3> 10.   Only the very best students receive financial aid from colleges.</h3>
-<div class="SwitchBtn" >                    
-    <input type="checkbox" class = "SwitchBtn_Check" id = "checkboxForSwitch" style = "display:none;"/>
-    <div class = "transitionSwitch">
-        <input type = "button" class = "SwitchBtn_Btn off" name = "TurnOn" onclick = "toggleStandBy()" />              
-        <div class = "slider_label off" id = "labelForSwitch" >
-            <div class = "SwitchBtn_active" id= "btnAct" ><span class = "switchOn">True</span></div>
-            <div class = "SwitchBtn_inactive" id= "btnInact" ><span class = "switchOff">False</span></div>
-        </div>
-    </div>   
+<legend>My answer is</legend>
+            <br/>
+            <input id="True10" type="radio" name="is_10" value="True">
+            <label for = "True10">True</Label>
+            <input id="False10" type="radio" name="is_10" value="False">
+            <label for = "False10">False</Label>
 <p>If you are admitted and have financial need, colleges generally want to make it possible for you to attend. In fact, the greatest proportion of financial assistance at a private colleges tends to go to students in the middle of the class. High-ability students or students with special talents may receive "merit-based scholarships."</p>
 
 
 
 
 
-      <script type="text/javascript">
-        function toggleStandBy()
-{    
-     if($(this).name == "TurnOn")
-     {  
-          $(this).name = "TurnOff";
-            }
-      else if($(this).name == "TurnOff")
-      {         
-                $(this).name = "TurnOn";
-       }
-    document.getElementById('checkboxForSwitch').checked = !document.getElementById('checkboxForSwitch').checked;
-      }
-      
-      </script>
+<script type="text/javascript">
+
+function checkAnswer(id, isCorrect)
+{
+	console.log('showing item');
+	$(id).show();
+	if(isCorrect)
+	{
+		console.log("they got it right");
+		$(id).removeClass("wrong");
+		$(id).addClass("correct");
+	}
+	else
+	{
+		$(id).removeClass("correct");
+		$(id).addClass("wrong");
+	}
+}
+
+$( document ).ready( function() {
+
+	$("#True1").click( function() { checkAnswer("#fact1", true); });
+	$("#False1").click( function() { checkAnswer("#fact1", false); });
+
+	$("#True2").click( function() { checkAnswer("#fact2", true); });
+	$("#False2").click( function() { checkAnswer("#fact2", false); }	
+	
+
+});
+
+
+
+
+</script>
 {% endblock %}
