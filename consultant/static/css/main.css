@@ -86,8 +86,40 @@ header
 #myths h3
 {
   font-family: Trebuchet MS;
-  font-size: 20px;
+  font-size: 25px;
   color: #FAFAFA;
+}
+
+#myths h2
+{
+  padding-left: 600px;
+  padding-right: 570px;
+  color: #FAFAFA;
+  font-family: Trebuchet MS;
+  font-size: 16px;
+}
+
+#myths
+{
+  text-align: center;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+#myths label
+{
+  text-align: center;
+  color: #FAFAFA;
+  font-family: Trebuchet MS;
+  font-size: 20px;
+}
+
+#myths p
+{
+  text-align: center;
+  color: #FAFAFA;
+  font-family: Trebuchet MS;
+  font-size: 15px;
 }
 
 h1
