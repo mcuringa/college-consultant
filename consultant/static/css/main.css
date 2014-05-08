@@ -8,8 +8,8 @@ src: url(/static/css/fonts/DKCoolCrayon.ttf);
 
 @font-face
 {
-font-family: clouds;
-src: url(/static/css/fonts/PinkClouds.ttf);
+font-family: bubble;
+src: url(/static/css/fonts/bubble.ttf);
 }
 
 @font-face
@@ -77,14 +77,15 @@ header
 
 #myths h1
 {
-  font-family: clouds;
+  font-family: bubble;
   color: #FAFAFA;
   font-size: 60px;
+  text-align: center;
 }
 
 #myths h3
 {
-  font-family: Marlett;
+  font-family: Trebuchet MS;
   font-size: 20px;
   color: #FAFAFA;
 }
