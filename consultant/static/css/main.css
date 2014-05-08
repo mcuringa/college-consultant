@@ -8,6 +8,12 @@ src: url(/static/css/fonts/DKCoolCrayon.ttf);
 
 @font-face
 {
+font-family: clouds;
+src: url(/static/css/fonts/PinkClouds.ttf);
+}
+
+@font-face
+{
 font-family: Angsa;
 src: url(/static/css/fonts/Angsa.ttf);
 }
@@ -67,6 +73,20 @@ header
 #about_us body
 {
   background-color: #FAFAFA;
+}
+
+#myths h1
+{
+  font-family: clouds;
+  color: #FAFAFA;
+  font-size: 60px;
+}
+
+#myths h3
+{
+  font-family: Marlett;
+  font-size: 20px;
+  color: #FAFAFA;
 }
 
 h1
