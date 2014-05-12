@@ -321,11 +321,17 @@ body
 }
 #contact_us
 {
-
   margin: 0;
   text-align: left;
   width: 100%;
   font-family: KG_text;
   font-weight: bold;
   font-size: 20px;
+}
+
+#admin_school_survey
+{
+  font-family: KG_text;
+  font-size: 20px;
+}
 

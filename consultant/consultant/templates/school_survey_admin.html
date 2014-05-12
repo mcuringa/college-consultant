@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block body %}
+<div id="admin_school_survey">
 <form action="/save_school" method="POST">
     {% csrf_token %}
     <fieldset>
