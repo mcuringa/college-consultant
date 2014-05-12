@@ -47,7 +47,8 @@ header
 {
 
   font-family: KG_text;
-  font-size: 20px
+  font-size: 20px;
+  margin-top: 100px;
 
 
 }
@@ -259,9 +260,7 @@ links
   font-size: 35px;
 }
 
-#school_table 
-
-body
+#school_table body
 
 {
     background: white;
@@ -321,7 +320,7 @@ body
 }
 #contact_us
 {
-  margin: 0;
+  margin-top: 100px;
   text-align: left;
   width: 100%;
   font-family: KG_text;
@@ -333,5 +332,13 @@ body
 {
   font-family: KG_text;
   font-size: 20px;
+}
+
+#school_search_result
+
+{
+  font-family: KG_text;
+  font-size: 40px;
+  margin: 100px;
 }
 

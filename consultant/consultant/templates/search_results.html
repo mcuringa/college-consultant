@@ -2,10 +2,11 @@
 
 {% block body %}
 
+<div id="school_search_result">
 {% if schools %}
-The following schools matched your search:<br>
+The following schools matched your search:<br> <br>
 {% for school in schools %}
-{{school.name}} <br>
+{{school.name}} <br> <br>
 {% endfor %}
 
 {% else %}
