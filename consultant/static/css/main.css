@@ -235,22 +235,8 @@ links
 
 #school_table 
 
-{
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Colleges</title>
-
-<meta charset="utf-8" />
-
-<style type="text/css">
-
-body, section, p, input, label, h1, h2, h3, h4
-{
-    font-family: KG_text, Futura, sans-serif;
-}
-
 body
+
 {
     background: white;
     max-width: 800px;
@@ -302,10 +288,6 @@ input[type="text"]
 input[type="text"].short
 {
     width: 100px;
-}
 
-</style>
-
-</head>
 }
 
