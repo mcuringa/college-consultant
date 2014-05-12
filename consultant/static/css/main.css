@@ -43,13 +43,17 @@ header
   text-align: center;
 }
 
+legend 
+{
+  font-style: bold;
+}
+
 #school_survey
 {
 
   font-family: KG_text;
   font-size: 20px;
   margin-top: 100px;
-
 
 }
 #about_us h1
