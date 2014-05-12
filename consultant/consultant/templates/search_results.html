@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% if schools %}
+The following schools matched your search:<br>
+{% for school in schools %}
+{{school.name}} <br>
+{% endfor %}
+
+{% else %}
+No schools matched your search.
+{% endif %}
+
+{% endblock %}

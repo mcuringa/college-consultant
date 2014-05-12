@@ -37,7 +37,7 @@
   
     <fieldset>
         <legend>Gender of School:</legend>
-        <label>Enter: 0 (co-ed), 1 (all girls), or 2 (all boys) (choose only one number): <input type="text" name="school_gender" placeholder="Enter Gender"/></label>
+        <label>Enter: 1 (co-ed), 2 (all girls), or 3 (all boys) (choose only one number): <input type="text" name="school_gender" placeholder="Enter Gender"/></label>
     </fieldset>
      
     <fieldset>
@@ -55,13 +55,13 @@
         <legend>Campus Location:</legend>
             <br/>
             <input id="rural" type="radio" name="location_type"
-                value="0">
+                value="1">
             <label for="rural">Rural</label>
             <input id="suburban" type="radio" name="location_type"
-                value="1">
+                value="2">
             <label for="suburban">Suburban</label>
             <input id="urban" type="radio" name="location_type"
-                value="2">
+                value="3">
             <label for="urban">Urban</label>
     </fieldset>
     
@@ -140,32 +140,44 @@
     <br/> 
     <br/>
     <input type="submit" value="Submit">
-    
 </form>
-
+<table id="school_table">
+<thead>
+    <tr>
+        <th>School</th>
+        <th>Two Year or Four Year?</th>
+        <th>Public/Private</th>
+        <th>Size</th>
+        <th>Gender</th>
+        <th>Residential</th>
+        <th>Location Type</th>
+        <th>State</th>
+        <th>Majors</th>
+        <th>Sports</th>
+    </tr>
+    </thead><tbody>
         {% for school in schools %}
             <tr>
                 <td><em>{{school.title}}</em></td>
                 <td>{{school.name}}</td>
-                <td>
-                  {% if school.is_four_year %}
+                <td>{% if school.is_four_year %}
                     Four Year
                   {% else %}
                     Two Year
                   {% endif %}
                 </td>
-                <td>{% if school.is_public %}</td>
+                <td>{% if school.is_public %}
                     Public 
                   {% else %}
                     Private
                   {% endif %}
                 </td>
                 <td>{{school.school_size}}</td>
-                <td>{% if school.school_gender == 0 %}</td>
+                <td>{% if school.school_gender == 1 %}
                     Co-ed
-                  {% elif school.school_gender == 1 %}
-                    All Girls
                   {% elif school.school_gender == 2 %}
+                    All Girls
+                  {% elif school.school_gender == 3 %}
                     All Boys
                   {% endif %}
                 </td>
@@ -176,26 +188,27 @@
                     Commuter
                   {% endif %}
                 </td>
-                <td>{% if school.location_type == 0 %}</td>
+                <td>{% if school.location_type == 1 %}
                     Rural
-                  {% elif school.location_type == 1 %}
-                    Urban
                   {% elif school.location_type == 2 %}
+                    Urban
+                  {% elif school.location_type == 3 %}
                     Suburban
                   {% endif %}
                 </td>
                 <td>{{school.location_state}}</td>      
                 <td>
                   {% for major in school.majors.all %}
-                    {{major.name}}
+                    {{major.name}}<br>
                   {% endfor %}
                 </td>
                 <td>
                   {% for sport in school.sports.all %}
-                    {{sport.name}}
+                    {{sport.name}}<br>
                   {% endfor %}
                 </td>
             </tr>
         {% endfor %}
-
+        </tbody>
+</table>
 {% endblock %}
