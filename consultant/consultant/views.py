@@ -38,6 +38,14 @@ def search(request):
     if public_param == 2:
         schools = schools.filter(is_public=False)
     
+    size_param = int(search_params.get("school_size", 4))
+    if size_param == 1:
+        schools = schools.filter(school_size__lt=2000)
+    if size_param == 2:
+        schools = schools.filter(school_size__lte=15000).filter(school_size__gte=2000)
+    if size_param == 3:
+        schools = schools.filter(school_size__gt=15000)
+    
     if search_params.get("school_gender", 1) == "":
         gender_params = 1
     else:

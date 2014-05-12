@@ -3,7 +3,10 @@
 {% block body %}
 
 {% if schools %}
-The following schools matched your search:<br>
+<br>
+The following schools matched your search:
+<br>
+<br>
 {% for school in schools %}
 {{school.name}} <br>
 {% endfor %}
