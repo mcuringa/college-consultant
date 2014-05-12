@@ -252,7 +252,7 @@ table
   margin-top: 1em;
 }
 
-th
+#school_table th
 {
   background: black;
   color: white;
@@ -261,7 +261,7 @@ th
   min-width: 100px
 }
 
-td
+#school_table td
 {
   background: black;
   color: white;
