@@ -244,7 +244,7 @@ body
     padding-bottom: 45px;
 }
 
-table
+#school_table table
 {
   border-collapse:collapse;
   width: 100%;
@@ -271,7 +271,7 @@ table
 }
 
 /* add some styles to our form */
-label
+#school_table label
 {
     display: block;
     float: left;
@@ -280,12 +280,12 @@ label
     width: 150px;
 }
 
-input[type="text"]
+#school_table input[type="text"]
 {
     width: 400px;
 }
 
-input[type="text"].short
+#school_table input[type="text"].short
 {
     width: 100px;
 
