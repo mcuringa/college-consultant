@@ -254,8 +254,8 @@ body
 
 #school_table th
 {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   font-weight: bold;
   text-align: left;
   min-width: 100px
@@ -263,8 +263,8 @@ body
 
 #school_table td
 {
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   font-weight: bold;
   text-align: left;
   min-width: 100px
