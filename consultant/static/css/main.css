@@ -272,6 +272,16 @@ th
   color: white;
   font-weight: bold;
   text-align: left;
+  min-width: 100px
+}
+
+td
+{
+  background: black;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  min-width: 100px
 }
 
 /* add some styles to our form */
