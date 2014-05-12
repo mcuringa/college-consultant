@@ -233,3 +233,84 @@ links
   font-size: 20px;
 }
 
+#school_table 
+
+{
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Colleges</title>
+
+<meta charset="utf-8" />
+
+<style type="text/css">
+
+body, section, p, input, label, h1, h2, h3, h4
+{
+    font-family: KG_text, Futura, sans-serif;
+}
+
+body
+{
+    background: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 45px;
+}
+
+table
+{
+  border-collapse:collapse;
+  width: 100%;
+  line-height: 1.5em;
+  margin-top: 1em;
+}
+
+th
+{
+  background: black;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* add some styles to our form */
+label
+{
+    display: block;
+    float: left;
+    padding-right: 0.5em;
+    text-align: right;
+    width: 150px;
+}
+
+input[type="text"]
+{
+    width: 400px;
+}
+
+input[type="text"].short
+{
+    width: 100px;
+}
+
+</style>
+
+</head>
+
+<body>
+<header>
+    <h1><a href="/" title="">Colleges</a></h1>
+    <nav id="top-nav">
+    <a href="/">books</a> | <a href="/authors">authors</a>
+    </nav>
+</header>
+{% block body %}{% endblock %}
+
+</section>
+
+</body>
+
+</html>
+}
+
