@@ -52,30 +52,12 @@
     <fieldset>
         <legend>Gender:</legend>
             <br/>
-            <input id="coed" type="radio" name="school_gender"
-                value="1">
-            <label for="coed">Coed</label>
-            <input id="all_women" type="radio" name="school_gender"
-                value="2">
-            <label for="all_women">All Women</label>
-            <input id="all_men" type="radio" name="school_gender"
-                value="3">
-            <label for="all_men">All Men</label>
+            {{school.school_gender}}
     </fieldset>
     
     <fieldset>
         <legend>Location:</legend>
-            <p>Within how many miles from home (or other location) do you prefer to be?:
-                <select name="distance">
-                    <option value="20_miles">20 miles</option>
-                    <option value="50_miles">50 miles</option>
-                    <option value="100_miles">100 miles</option>
-                    <option value="no_preference">No preference</option>
-                </select>
-            </p>
-        <label>Zip code: <input type="text" name="zip_code" placeholder="Enter Zip code"/></label>
-        <p>OR</p>
-        <label>State: <input type="text" name="state" placeholder="Enter State"/></label>
+        <label>State: {{school.location_state}}</label>
     </fieldset>
     
     <fieldset>
@@ -135,9 +117,14 @@
                     <option value="volleyball">Volleyball</option>
                     <option value="wrestling">Wrestling</option>
                 </select>            
+        
+        <br>
+        <br>
         <input type="submit" value="Search">
 </form>
 
+<br>
+<br>
 
 {% endblock %}
 

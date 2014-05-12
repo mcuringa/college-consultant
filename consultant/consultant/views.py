@@ -10,13 +10,16 @@ def home(request):
 
 def college_form(request):
     """Enter a new college"""
+    form = SchoolForm()
     schools = School.objects.all()
-    context = {"schools": schools}
+    context = {"schools": schools, "school": form}
     
     return render(request, 'school_survey_admin.html', context)
 
 def college_search(request):
-    return render(request, "school_survey.html")
+    form = SchoolForm()
+    context = {"school": form}
+    return render(request, "school_survey.html", context)
     
 def search(request):
     """The search link"""
@@ -35,14 +38,21 @@ def search(request):
     if public_param == 2:
         schools = schools.filter(is_public=False)
     
-    gender_params = int(search_params.get("school_gender", 1))
+    if search_params.get("school_gender", 1) == "":
+        gender_params = 1
+    else:
+        gender_params = int(search_params.get("school_gender", 1))
     if gender_params == 1:
         schools = schools.filter(school_gender=1)
     if gender_params == 2:
         schools = schools.filter(school_gender=2)
     if gender_params == 3:
-        schools = schools.filter(school_gender=3)   
-    
+        schools = schools.filter(school_gender=3)  
+        
+    state = search_params.get("location_state", "")
+    if state != "":
+        schools = schools.filter(location_state=state)
+        
     major_ids = []
     majors = search_params.get("majors", [])
     for major_id in majors:
