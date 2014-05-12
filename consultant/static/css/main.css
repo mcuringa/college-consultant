@@ -18,6 +18,24 @@ font-family: Angsa;
 src: url(/static/css/fonts/Angsa.ttf);
 }
 
+@font-face
+{
+font-family: KG_text;
+src: url(/static/css/fonts/KG_text.ttf)
+}
+
+@font-face
+{
+font-family: GlametrixLight;
+src: url(/static/css/fonts/GlametrixLight.otf)
+}
+
+@font-face
+{
+font-family: high_school;
+src: url(/static/css/fonts/high_school.ttf)
+
+}
 header
 {
   font-family: Angsa;
@@ -25,6 +43,14 @@ header
   text-align: center;
 }
 
+#school_survey
+{
+
+  font-family: KG_text;
+  font-size: 20px
+
+
+}
 #about_us h1
 {
   font-family: crayon;
@@ -187,7 +213,7 @@ links
   font-size: 20px;
   height: auto;
   margin: auto;
-  font-family: Papyrus;
+  font-family: high_school;
   font-weight: bold;
   color: #0A0A2A;
   padding: 0 1em;
@@ -198,7 +224,7 @@ links
 {
   text-decoration: none; 
   color: #0080FF;
-  font-family: Papyrus;
+  font-family: high_school;
   font-weight: bold;
   font-size: 20px;
 }
@@ -217,9 +243,9 @@ links
 {
   text-align: center;
   width: 100%;
-  font-family: Papyrus;
+  font-family: GlametrixLight;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 45px;
   margin: 0;
 }
 
@@ -228,9 +254,9 @@ links
   margin: 0;
   text-align: center;
   width: 100%;
-  font-family: Papyrus;
+  font-family: GlametrixLight;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 35px;
 }
 
 #school_table 
@@ -250,6 +276,7 @@ body
   width: 100%;
   line-height: 1.5em;
   margin-top: 1em;
+
 }
 
 #school_table th
@@ -258,7 +285,8 @@ body
   color: black;
   font-weight: bold;
   text-align: left;
-  min-width: 100px
+  min-width: 100px;
+  font-family: KG_text; 
 }
 
 #school_table td
@@ -267,7 +295,8 @@ body
   color: black;
   font-weight: bold;
   text-align: left;
-  min-width: 100px
+  min-width: 100px;
+  font-family: KG_text;
 }
 
 /* add some styles to our form */
@@ -290,4 +319,13 @@ body
     width: 100px;
 
 }
+#contact_us
+{
+
+  margin: 0;
+  text-align: left;
+  width: 100%;
+  font-family: KG_text;
+  font-weight: bold;
+  font-size: 20px;
 
