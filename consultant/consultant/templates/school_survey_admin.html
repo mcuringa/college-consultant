@@ -4,7 +4,7 @@
 <form action="/save_school" method="POST">
     {% csrf_token %}
     <fieldset>
-        <legend>Name of School:</legend>
+        <legend>School:</legend>
         <label>Name of School: <input type="text" name="name" placeholder="Name of School"/></label>
     </fieldset>
     
@@ -37,7 +37,7 @@
   
     <fieldset>
         <legend>Gender of School:</legend>
-        <label>Enter: 1 (co-ed), 2 (all girls), or 3 (all boys) (choose only one number): <input type="text" name="school_gender" placeholder="Enter Gender"/></label>
+        <label>{{school.school_gender}}</label>
     </fieldset>
      
     <fieldset>
@@ -67,7 +67,7 @@
     
     <fieldset>
         <legend>Location of School:</legend>
-        <label>State: <input type="text" name="location_state" placeholder="Enter State"/></label>
+        <label>State: {{school.location_state}}</label>
     </fieldset>
     
     <fieldset>
@@ -158,7 +158,6 @@
     </thead><tbody>
         {% for school in schools %}
             <tr>
-                <td><em>{{school.title}}</em></td>
                 <td>{{school.name}}</td>
                 <td>{% if school.is_four_year %}
                     Four Year

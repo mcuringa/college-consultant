@@ -13,15 +13,66 @@ class Sport(models.Model):
         ordering = ('name',)
 
 class School(models.Model):
-
+  state_choices = {('AK', 'Alaska'),
+                   ('AL', 'Alabama'),
+                   ('AR', 'Arkansas'),
+                   ('AZ', 'Arizona'),
+                   ('CA', 'California'),
+                   ('CO', 'Colorado'),
+                   ('CT', 'Connecticut'),
+                   ('DE', 'Deleware'),
+                   ('FL', 'Florida'),
+                   ('GA', 'Georgia'),
+                   ('HI', 'Hawaii'),
+                   ('IA', 'Iowa'),
+                   ('ID', 'Idaho'),
+                   ('IL', 'Illinois'),
+                   ('IN', 'Indiana'),
+                   ('KS', 'Kansas'),
+                   ('KY', 'Kentucky'),
+                   ('LA', 'Louisiana'),
+                   ('MA', 'Massachusetts'),
+                   ('MD', 'Maryland'),
+                   ('ME', 'Maine'),
+                   ('MI', 'Michigan'),
+                   ('MN', 'Minnesota'),
+                   ('MO', 'Missouri'),
+                   ('MS', 'Mississippi'),
+                   ('MT', 'Montana'),
+                   ('NC', 'North Carolina'),
+                   ('ND', 'North Dakota'),
+                   ('NE', 'Nebraska'),
+                   ('NH', 'New Hampshire'),
+                   ('NJ', 'New Jersey'),
+                   ('NM', 'New Mexico'),
+                   ('NV', 'Nevada'),
+                   ('NY', 'New York'),
+                   ('OH', 'Ohio'),
+                   ('OK', 'Oklahoma'),
+                   ('OR', 'Oregon'),
+                   ('PA', 'Pennsylvania'),
+                   ('RI', 'Rhode Island'),
+                   ('SC', 'South Carolina'),
+                   ('SD', 'South Dakota'),
+                   ('TN', 'Tennessee'),
+                   ('TX', 'Texas'),
+                   ('UT', 'Utaha'),
+                   ('VA', 'Virginia'),
+                   ('VT', 'Vermont'),
+                   ('WA', 'Washington'),
+                   ('WI', 'Wisconsin'),
+                   ('WV', 'West Virginia'),
+                   ('WY', 'Wyoming'),
+                   ('DC', 'Washington, DC')}
+  gender_choices = {(1,"Co-ed"),(2,"All Female"),(3,"All Male")}
   name = models.CharField(max_length=500)
   is_four_year = models.BooleanField(default=True)
   is_public = models.BooleanField(default=True)
   school_size = models.IntegerField()
-  school_gender = models.IntegerField()
+  school_gender = models.IntegerField(choices=gender_choices)
   is_residential = models.BooleanField(default=True)
   location_type = models.IntegerField()
-  location_state = models.CharField(max_length=500)
+  location_state = models.CharField(choices=state_choices,max_length=2)
   majors = models.ManyToManyField(Major)
   sports = models.ManyToManyField(Sport)
   
