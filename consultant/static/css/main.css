@@ -297,20 +297,5 @@ input[type="text"].short
 </style>
 
 </head>
-
-<body>
-<header>
-    <h1><a href="/" title="">Colleges</a></h1>
-    <nav id="top-nav">
-    <a href="/">books</a> | <a href="/authors">authors</a>
-    </nav>
-</header>
-{% block body %}{% endblock %}
-
-</section>
-
-</body>
-
-</html>
 }
 
