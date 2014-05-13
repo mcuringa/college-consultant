@@ -47,9 +47,9 @@ def search(request):
         schools = schools.filter(school_size__gt=15000)
     
     if search_params.get("school_gender", 1) == "":
-        gender_params = 1
+        gender_params = 4
     else:
-        gender_params = int(search_params.get("school_gender", 1))
+        gender_params = int(search_params.get("school_gender", 4))
     if gender_params == 1:
         schools = schools.filter(school_gender=1)
     if gender_params == 2:
@@ -60,6 +60,7 @@ def search(request):
     state = search_params.get("location_state", "")
     if state != "":
         schools = schools.filter(location_state=state)
+    print(str(schools) + str(type(schools)))
         
     campus_param = int(search_params.get("is_residential", 3))
     if campus_param == 1:
@@ -74,39 +75,18 @@ def search(request):
         schools = schools.filter(location_type=2)
     if location_param == 3:
         schools = schools.filter(location_type=3)
-      
-    majors = search_params.get("majors", 0)
-    if majors > 0:
-        schools = schools.filter(majors__in=major)
-  
-    """
-    if search_params.get("major", 1) == "":
-        majors_params = 1
-    else:
-        majors_params = int(search_params.get("majors", 12))
-    if majors_params == 1:
-        majors = majors.filter(majors=11)
-    if majors_params == 2:
-        schools = majors.filter(majors=1)
-    if majors_params == 3:
-        schools = majors.filter(majors=2)
-    if majors_params == 4:
-        schools = majors.filter(majors=3)
-    if majors_params == 5:
-        schools = majors.filter(majors=4)
-    if majors_params == 6:
-        schools = majors.filter(majors=5)
-    if majors_params == 7:
-        schools = majors.filter(majors=6)
-    if majors_params == 8:
-        schools = majors.filter(majors=7)
-    if majors_params == 9:
-        schools = majors.filter(majors=8)
-    if majors_params == 10:
-        schools = majors.filter(majors=9)
-    if majors_params == 11:
-        schools = majors.filter(majors=10)
-    """
+    print(str(schools) + str(type(schools)) )
+    major = int(search_params.get("majors", 0))
+    print(str(major))
+    if major > 0:
+        major_list = [major]
+        schools = schools.filter(majors__in=major_list)
+    print(str(schools) + str(type(schools)) )
+    sport = int(search_params.get("sports", 0))
+    if sport > 0:
+        sport_list = [sport]
+        schools = schools.filter(sports__in=sport_list)
+    
     context = { "schools": schools }
     
     return render(request, 'search_results.html', context)

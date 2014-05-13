@@ -75,18 +75,6 @@ class School(models.Model):
   location_state = models.CharField(choices=state_choices,max_length=2)
   majors = models.ManyToManyField(Major)
   sports = models.ManyToManyField(Sport)
-  major_choices = {(1,"Accounting"),
-                   (2,"Biology/Biotechnology"),
-                   (3,"Business"),
-                   (4,"Communication/Journalism"),
-                   (5,"Computer Science/Computer Technology"),
-                   (6,"Criminal Justice"),
-                   (7,"Education"),
-                   (8,"Marketing"),
-                   (9,"Nursing"),
-                   (10,"Political Science/Sociology"),
-                   (11,"Psychology/Counseling")}
-  major = models.IntegerField(choices=major_choices)
   
 class SchoolForm(ModelForm):
     """A ModelForm to hold our schools"""
