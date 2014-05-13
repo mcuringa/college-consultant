@@ -60,19 +60,30 @@ def search(request):
     state = search_params.get("location_state", "")
     if state != "":
         schools = schools.filter(location_state=state)
-    """    
-    major_ids = []
-    majors = search_params.get("majors", [])
-    for major_id in majors:
-        major_ids.extend(int(major_id))
-    if majors:
-        schools = schools.filter(majors__in=major_ids)
-    """
+        
+    campus_param = int(search_params.get("is_residential", 3))
+    if campus_param == 1:
+        schools = schools.filter(is_residential=True)
+    if campus_param == 2:
+        schools = schools.filter(is_residential=False)
+        
+    location_param = int(search_params.get("location_type", 4))
+    if location_param == 1:
+        schools = schools.filter(location_type=1)
+    if location_param == 2:
+        schools = schools.filter(location_type=2)
+    if location_param == 3:
+        schools = schools.filter(location_type=3)
+      
+    majors = search_params.get("majors", 0)
+    if majors > 0:
+        schools = schools.filter(majors__in=major)
+  
     """
     if search_params.get("major", 1) == "":
         majors_params = 1
     else:
-        majors_params = int(search_params.get("majors", 1))
+        majors_params = int(search_params.get("majors", 12))
     if majors_params == 1:
         majors = majors.filter(majors=11)
     if majors_params == 2:

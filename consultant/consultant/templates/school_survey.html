@@ -62,17 +62,26 @@
     
     <fieldset>
         <legend>Campus:</legend>
+            <input id="residential" type="radio" name="is_residential"
+                value="True">
+            <label for="residential">Residential</label>
+            <input id="commuter" type="radio" name="is_residential"
+                value="False">
+            <label for="commuter">Commuter</label>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Campus Location:</legend>
             <br/>
-            <input type="checkbox" name="campus"
-                value="rural" /> Rural
-            <input type="checkbox" name="campus"
-                value="suburban" /> Suburban
-            <input type="checkbox" name="campus"
-                value="urban" /> Urban
-            <input type="checkbox" name="campus"
-                value="residential" /> Residential
-            <input type="checkbox" name="campus"
-                value="commuter" /> Commuter
+            <input id="rural" type="radio" name="location_type"
+                value="1">
+            <label for="rural">Rural</label>
+            <input id="suburban" type="radio" name="location_type"
+                value="2">
+            <label for="suburban">Suburban</label>
+            <input id="urban" type="radio" name="location_type"
+                value="3">
+            <label for="urban">Urban</label>
     </fieldset>
     
     <fieldset>
