@@ -60,14 +60,42 @@ def search(request):
     state = search_params.get("location_state", "")
     if state != "":
         schools = schools.filter(location_state=state)
-        
+    """    
     major_ids = []
     majors = search_params.get("majors", [])
     for major_id in majors:
         major_ids.extend(int(major_id))
     if majors:
         schools = schools.filter(majors__in=major_ids)
-    
+    """
+    """
+    if search_params.get("major", 1) == "":
+        majors_params = 1
+    else:
+        majors_params = int(search_params.get("majors", 1))
+    if majors_params == 1:
+        majors = majors.filter(majors=11)
+    if majors_params == 2:
+        schools = majors.filter(majors=1)
+    if majors_params == 3:
+        schools = majors.filter(majors=2)
+    if majors_params == 4:
+        schools = majors.filter(majors=3)
+    if majors_params == 5:
+        schools = majors.filter(majors=4)
+    if majors_params == 6:
+        schools = majors.filter(majors=5)
+    if majors_params == 7:
+        schools = majors.filter(majors=6)
+    if majors_params == 8:
+        schools = majors.filter(majors=7)
+    if majors_params == 9:
+        schools = majors.filter(majors=8)
+    if majors_params == 10:
+        schools = majors.filter(majors=9)
+    if majors_params == 11:
+        schools = majors.filter(majors=10)
+    """
     context = { "schools": schools }
     
     return render(request, 'search_results.html', context)
