@@ -1,0 +1,138 @@
+[
+  {
+    "model": "consultant.sport",
+    "pk": 1,
+    "fields": {
+      "name": "Baseball"
+    }
+  },
+  {
+    "model": "consultant.sport",
+    "pk": 2,
+    "fields": {
+      "name": "Basketball"
+    }
+  },
+  
+    {
+    "model": "consultant.sport",
+    "pk": 3,
+    "fields": {
+      "name": "Bowling"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 4,
+    "fields": {
+      "name": "Cross Country"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 5,
+    "fields": {
+      "name": "Fencing"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 6,
+    "fields": {
+      "name": "Field Hockey"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 7,
+    "fields": {
+      "name": "Football"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 8,
+    "fields": {
+      "name": "Golf"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 9,
+    "fields": {
+      "name": "Gymnastics"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 10,
+    "fields": {
+      "name": "Ice Hockey"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 11,
+    "fields": {
+      "name": "Lacrosse"
+    }
+  },
+      {
+    "model": "consultant.sport",
+    "pk": 12,
+    "fields": {
+      "name": "Rowing"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 13,
+    "fields": {
+      "name": "Soccer"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 14,
+    "fields": {
+      "name": "Softball"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 15,
+    "fields": {
+      "name": "Swimming"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 16,
+    "fields": {
+      "name": "Tennis"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 17,
+    "fields": {
+      "name": "Track & Field"
+    }
+  },
+  {
+    "model": "consultant.sport",
+    "pk": 18,
+    "fields": {
+      "name": "Volleyball"
+    }
+  },
+    {
+    "model": "consultant.sport",
+    "pk": 19,
+    "fields": {
+      "name": "Wrestling"
+    }
+  }
+]
+      
+      

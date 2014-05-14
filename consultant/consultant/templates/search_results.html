@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div id="school_search_result">
+{% if schools %}
+<<<<<<< HEAD
+The following schools matched your search:<br> <br>
+=======
+<br>
+The following schools matched your search:
+<br>
+<br>
+>>>>>>> FETCH_HEAD
+{% for school in schools %}
+{{school.name}} <br> <br>
+{% endfor %}
+
+{% else %}
+No schools matched your search.
+{% endif %}
+
+{% endblock %}

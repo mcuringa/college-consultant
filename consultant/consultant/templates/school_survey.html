@@ -2,108 +2,62 @@
 
 {% block body %}
 
+<div id= "school_survey">
+<form action="/search" method="POST">
+    {% csrf_token %}
 
-
-
-<div id="mapdiv" style="width: 600px; height: 400px;"></div>
-
-<script>
- // add all your code to this method, as this will ensure that page is loaded
-    AmCharts.ready(function() {
-        // create AmMap object
-        var map = new AmCharts.AmMap();
-        // set path to images
-        map.pathToImages = "/static/ammap/images/";
-
-        /* create data provider object
-         map property is usually the same as the name of the map file.
-
-         getAreasFromMap indicates that amMap should read all the areas available
-         in the map data and treat them as they are included in your data provider.
-         in case you don't set it to true, all the areas except listed in data
-         provider will be treated as unlisted.
-        */
-        var dataProvider = {
-            map: "usaLow",
-            getAreasFromMap:true                    
-        }; 
-        // pass data provider to the map object
-        map.dataProvider = dataProvider;
-
-        /* create areas settings
-         * autoZoom set to true means that the map will zoom-in when clicked on the area
-         * selectedColor indicates color of the clicked area.
-         */
-        map.areasSettings = {
-            autoZoom: true,
-            selectedColor: "#CC0000"
-        };
-
-        // let's say we want a small map to be displayed, so let's create it
-        map.smallMap = new AmCharts.SmallMap();
-
-        // write the map to container div
-        map.write("mapdiv");
-    });
-</script>
-
-<form action="file:///C:/Users/Kimberly/Documents/GitHub/college-consultant/consultant/consultant/templates/home.html">
+    
     <fieldset>
         <legend>Length of Study:</legend>
             <br/>
-            <input type="checkbox" name="type"
-                value="two_year" /> Two Year
-            <input type="checkbox" name="type"
-                value="four_year" /> Four Year
+            <input id="four_year" type="radio" name="is_four_year"
+                value="1">
+            <label for="four_year">Four Year</label>
+            <input id="two_year" type="radio" name="is_four_year"
+                value="2">
+            <label for="two_year">Two Year</label>
+            <input id="both" type="radio" name="is_four_year"
+                value="3">
+            <label for="dont_care">Don't Care</label>
     </fieldset>
     
     <fieldset>
-        <legend>Type of school:</legend>
+        <legend>Type of School:</legend>
             <br/>
-            <input type="checkbox" name="type"
-                value="public" /> Public
-            <input type="checkbox" name="type"
-                value="private" /> Private
+            <input id="public" type="radio" name="is_public"
+                value="1">
+            <label for="public">Public</label>
+            <input id="private" type="radio" name="is_public"
+                value="2">
+            <label for="private">Private</label>
+            <input id="both" type="radio" name="is_public"
+                value="3">
+            <label for="both">Don't Care</label>     
     </fieldset>
     
     <fieldset>
         <legend>School Size:</legend>
             <br/>
-            <input type="checkbox" name="size"
-                value="<2000" /> < 2,000
-            <input type="checkbox" name="size"
-                value="2,000-15,000" /> 2,000-15,000
-            <input type="checkbox" name="size"
-                value=">15,000" /> > 15,000
+            <input id="less_2000" type="radio" name="school_size"
+                value="1">
+            <label for="less_2000">Less Than 2,000</label>
+            <input id="between" type="radio" name="school_size"
+                value="2">
+            <label for="between">2,000 - 15,000</label>
+            <input id="greater_15000" type="radio" name="school_size"
+                value="3">
+            <label for="greater_15000">Greater Than 15,000</label>
     </fieldset>
     
     <fieldset>
         <legend>Gender:</legend>
             <br/>
-            <input id="coed" type="radio" name="gender"
-                value="c">
-            <label for="coed">Coed</label>
-            <input id="all_women" type="radio" name="gender"
-                value="w">
-            <label for="all_women">All Women</label>
-            <input id="all_men" type="radio" name="gender"
-                value="m">
-            <label for="all_men">All Men</label>
+            {{school.school_gender}}
     </fieldset>
     
     <fieldset>
         <legend>Location:</legend>
-            <p>Within how many miles from home (or other location) do you prefer to be?:
-                <select name="distance">
-                    <option value="20_miles">20 miles</option>
-                    <option value="50_miles">50 miles</option>
-                    <option value="100_miles">100 miles</option>
-                    <option value="no_preference">No preference</option>
-                </select>
-            </p>
-        <label>Zip code: <input type="text" name="zip_code" placeholder="Enter Zip code"/></label>
-        <p>OR</p>
-        <label>State: <input type="text" name="state" placeholder="Enter State"/></label>
+        <label>State: {{school.location_state}}</label>
     </fieldset>
     
     <fieldset>
@@ -124,29 +78,19 @@
     <fieldset>
         <legend>Majors and Learning Environment:</legend>
             <p>Major:</p>
-                <select name="major">
-                    <option value="accounting">Accounting</option>
-                    <option value="bio/biotech">Biology/Biotechnology</option>
-                    <option value="business">Business</option>
-                    <option value="comm/journal">Communication/Journalism</option>
-                    <option value="compsci/comptech">Computer Science/Computer Technology</option>
-                    <option value="criminal_justice">Criminal Justice</option>
-                    <option value="education">Education</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="nursing">Nursing</option>
-                    <option value="polysci/socio">Political Science/Sociology</option>
-                    <option value="psych/couns">Psychology/Counseling</option>
+                <select name="majors">
+                    <option value="1">Accounting</option>
+                    <option value="2">Biology/Biotechnology</option>
+                    <option value="3">Business</option>
+                    <option value="4">Communication/Journalism</option>
+                    <option value="5">Computer Science/Computer Technology</option>
+                    <option value="6">Criminal Justice</option>
+                    <option value="7">Education</option>
+                    <option value="8">Marketing</option>
+                    <option value="9">Nursing</option>
+                    <option value="10">Political Science/Sociology</option>
+                    <option value="11">Psychology/Counseling</option>
                 </select>
-    
-                <p>Study Options:</p>
-            <input type="checkbox" name="study"
-                value="honors_program" /> Honors Program
-            <input type="checkbox" name="study"
-                value="rotc" /> ROTC
-            <input type="checkbox" name="study"
-                value="study_abroad" /> Study Abroad
-            <input type="checkbox" name="study"
-                value="teacher_cert" /> Teacher Certification
     </fieldset>
     
     <fieldset>
@@ -172,25 +116,15 @@
                     <option value="track_field">Track & Field</option>
                     <option value="volleyball">Volleyball</option>
                     <option value="wrestling">Wrestling</option>
-                </select>
-    
-            <p>Activities:</p>
-            <input type="checkbox" name="study"
-                value="student_newspaper" /> Student Newspaper
-            <input type="checkbox" name="study"
-                value="tv" /> TV Station
-            <input type="checkbox" name="study"
-                value="drama_theater" /> Drama/Theater
-            <input type="checkbox" name="study"
-                value="marching_band" /> Marching Band
-            <input type="checkbox" name="study"
-                value="radio" /> Radio Station
-            <input type="checkbox" name="study"
-                value="fraternities" /> Fraternities
-            <input type="checkbox" name="study"
-                value="sororities" /> Sororities
+                </select>            
+        
+        <br>
+        <br>
+        <input type="submit" value="Search">
 </form>
 
+<br>
+<br>
 
 {% endblock %}
 

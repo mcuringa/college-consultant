@@ -1,0 +1,82 @@
+[
+  {
+    "model": "consultant.major",
+    "pk": 1,
+    "fields": {
+      "name": "Biology/Biotechnology"
+    }
+  },
+  {
+    "model": "consultant.major",
+    "pk": 2,
+    "fields": {
+      "name": "Business"
+    }
+  },
+  
+    {
+    "model": "consultant.major",
+    "pk": 3,
+    "fields": {
+      "name": "Communication/Journalism"
+    }
+  },
+    {
+    "model": "consultant.major",
+    "pk": 4,
+    "fields": {
+      "name": "Computer Science/Computer Technology"
+    }
+  },
+    {
+    "model": "consultant.major",
+    "pk": 5,
+    "fields": {
+      "name": "Criminal Justice"
+    }
+  },
+    {
+    "model": "consultant.major",
+    "pk": 6,
+    "fields": {
+      "name": "Education"
+    }
+  },
+    {
+    "model": "consultant.major",
+    "pk": 7,
+    "fields": {
+      "name": "Marketing"
+    }
+  },
+    {
+    "model": "consultant.major",
+    "pk": 8,
+    "fields": {
+      "name": "Nursing"
+    }
+  },
+    {
+    "model": "consultant.major",
+    "pk": 9,
+    "fields": {
+      "name": "Political Science/Sociology"
+    }
+  },
+    {
+    "model": "consultant.major",
+    "pk": 10,
+    "fields": {
+      "name": "Psychology/Counseling"
+    }
+  },
+    {
+    "model": "consultant.major",
+    "pk": 11,
+    "fields": {
+      "name": "Accounting"
+    }
+  }
+]
+      
+      

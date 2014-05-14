@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 
 {% block body %}
+<div id="admin_school_survey">
 <form action="/save_school" method="POST">
     {% csrf_token %}
     <fieldset>
-        <legend>Name of School:</legend>
+        <legend>School:</legend>
         <label>Name of School: <input type="text" name="name" placeholder="Name of School"/></label>
     </fieldset>
     
@@ -29,129 +30,188 @@
                 value="False">
             <label for="private">Private</label>
     </fieldset>
-<!--     
+     
     <fieldset>
         <legend>School Size:</legend>
         <label>Size of School: <input type="text" name="school_size" placeholder="Enter Size"/></label>
     </fieldset>
-   
+  
     <fieldset>
         <legend>Gender of School:</legend>
-        <label>Enter co-ed, female, or male (choose only one): <input type="text" name="school_name" placeholder="Enter Preferred Gender"/></label>
+        <label>{{school.school_gender}}</label>
     </fieldset>
-    
+     
     <fieldset>
         <legend>Campus:</legend>
-            <br/>
             <p>Residential or Commuter?:</p>
-            <input id="residential" type="radio" name="campus"
-                value="true">
+            <input id="residential" type="radio" name="is_residential"
+                value="True">
             <label for="residential">Residential</label>
-            <input id="commuter" type="radio" name="campus"
-                value="false">
+            <input id="commuter" type="radio" name="is_residential"
+                value="False">
             <label for="commuter">Commuter</label>
     </fieldset>
     
     <fieldset>
         <legend>Campus Location:</legend>
             <br/>
-            <input id="rural" type="radio" name="location"
+            <input id="rural" type="radio" name="location_type"
                 value="1">
             <label for="rural">Rural</label>
-            <input id="suburban" type="radio" name="location"
+            <input id="suburban" type="radio" name="location_type"
                 value="2">
             <label for="suburban">Suburban</label>
-            <input id="urban" type="radio" name="location"
+            <input id="urban" type="radio" name="location_type"
                 value="3">
             <label for="urban">Urban</label>
     </fieldset>
     
     <fieldset>
         <legend>Location of School:</legend>
-        <label>Zip code: <input type="text" name="zip_code" placeholder="Enter Zip code"/></label>
-        <p>OR</p>
-        <label>State: <input type="text" name="state" placeholder="Enter State"/></label>
+        <label>State: {{school.location_state}}</label>
     </fieldset>
     
     <fieldset>
-        <legend>Majors and Learning Environment:</legend>
-            <p>Major:</p>
-                <select name="major">
-                    <option value="accounting">Accounting</option>
-                    <option value="bio/biotech">Biology/Biotechnology</option>
-                    <option value="business">Business</option>
-                    <option value="comm/journal">Communication/Journalism</option>
-                    <option value="compsci/comptech">Computer Science/Computer Technology</option>
-                    <option value="criminal_justice">Criminal Justice</option>
-                    <option value="education">Education</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="nursing">Nursing</option>
-                    <option value="polysci/socio">Political Science/Sociology</option>
-                    <option value="psych/couns">Psychology/Counseling</option>
+        <legend>Majors:</legend>
+            <p>Choose all Majors that Apply:</p>
+                    <span> <input type="checkbox" name="majors"
+                        value="11" /> Accounting /<span>
+                    <span><input type="checkbox" name="majors"
+                        value="1" /> Biology/Biotechnology </span>
+                    <span><input type="checkbox" name="majors"
+                        value="2" /> Business </span>
+                    <span><input type="checkbox" name="majors"
+                        value="3" /> Communication/Journalism </span>
+                    <span><input type="checkbox" name="majors"
+                        value="4" /> Computer Science/Computer Technology </span>
+                    <span><input type="checkbox" name="majors"
+                        value="5" /> Criminal Justice </span>
+                    <span><input type="checkbox" name="majors"
+                        value="6" /> Education </span>
+                    <span> <input type="checkbox" name="majors"
+                        value="7" /> Marketing </span>
+                    <span><input type="checkbox" name="majors"
+                        value="8" /> Nursing </span>
+                    <span><input type="checkbox" name="majors"
+                        value="9" /> Political Science/Sociology </span>
+                    <input type="checkbox" name="majors"
+                        value="10" /> Psychology/Counseling </span>
                 </select>
-    
-                <p>Study Options:</p>
-            <input type="checkbox" name="study"
-                value="honors_program" /> Honors Program
-            <input type="checkbox" name="study"
-                value="rotc" /> ROTC
-            <input type="checkbox" name="study"
-                value="study_abroad" /> Study Abroad
-            <input type="checkbox" name="study"
-                value="teacher_cert" /> Teacher Certification
-    </fieldset>
+    </fieldset>        
     
     <fieldset>
-        <legend>Sports and Activities:</legend>
-            <p>Sports:</p>
-                <select name="sports">
-                    <option value="baseball">Baseball</option>
-                    <option value="basketball">Basketball</option>
-                    <option value="bowling">Bowling</option>
-                    <option value="cross_country">Cross Country</option>
-                    <option value="fencing">Fencing</option>
-                    <option value="field_hockey">Field Hockey</option>
-                    <option value="football">Football</option>
-                    <option value="golf">Golf</option>
-                    <option value="gymnastics">Gymnastics</option>
-                    <option value="ice_hockey">Ice Hockey</option>
-                    <option value="lacrosse">Lacrosse</option>
-                    <option value="rowing">Rowing/Crew</option>
-                    <option value="soccer">Soccer</option>
-                    <option value="softball">Softball</option>
-                    <option value="swimming">Swimming</option>
-                    <option value="tennis">Tennis</option>
-                    <option value="track_field">Track & Field</option>
-                    <option value="volleyball">Volleyball</option>
-                    <option value="wrestling">Wrestling</option>
+        <legend>Sports:</legend>
+                    <span><input type="checkbox" name="sports"
+                        value="1" /> Baseball </span>
+                    <span><input type="checkbox" name="sports"
+                        value="2" /> Basketball </span>
+                    <span> <input type="checkbox" name="sports"
+                        value="3" /> Bowling </span>
+                    <span> <input type="checkbox" name="sports"
+                        value="4" /> Cross Country </span>
+                    <span> <input type="checkbox" name="sports"
+                        value="5" /> Fencing </span>
+                    <span> <input type="checkbox" name="sports"
+                        value="6" /> Field Hockey </span>
+                    <span> <input type="checkbox" name="sports"
+                        value="7" /> Golf </span>
+                    <span><input type="checkbox" name="sports"
+                        value="8" /> Gymnastics </span>
+                    <span><input type="checkbox" name="sports"
+                        value="9" /> Ice Hockey </span>
+                    <span><input type="checkbox" name="sports"
+                        value="10" /> Lacrosse </span>
+                    <span><input type="checkbox" name="sports"
+                        value="11" /> Rowing </span>
+                    <span><input type="checkbox" name="sports"
+                        value="7" /> Soccer </span>
+                    <span><input type="checkbox" name="sports"
+                        value="8" /> Softball </span>
+                    <span><input type="checkbox" name="sports"
+                        value="9" /> Swimming </span>
+                    <span><input type="checkbox" name="sports"
+                        value="10" /> Tennis </span>
+                    <span><input type="checkbox" name="sports"
+                        value="11" /> Track & Field </span>
+                    <span><input type="checkbox" name="sports"
+                        value="10" /> Volleyball </span>
+                    <span><input type="checkbox" name="sports"
+                        value="11" /> Wrestling </span>
                 </select>
-    
-            <p>Activities:</p>
-            <input type="checkbox" name="study"
-                value="student_newspaper" /> Student Newspaper
-            <input type="checkbox" name="study"
-                value="tv" /> TV Station
-            <input type="checkbox" name="study"
-                value="drama_theater" /> Drama/Theater
-            <input type="checkbox" name="study"
-                value="marching_band" /> Marching Band
-            <input type="checkbox" name="study"
-                value="radio" /> Radio Station
-            <input type="checkbox" name="study"
-                value="fraternities" /> Fraternities
-            <input type="checkbox" name="study"
-                value="sororities" /> Sororities -->
-                
-    <input type="submit" >
-</form>
-
+    </fieldset>
+        <br> 
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+<table id="school_table">
+<thead>
+    <tr>
+        <th>School</th>
+        <th>Two Year or Four Year</th>
+        <th>Public/Private</th>
+        <th>Size</th>
+        <th>Gender</th>
+        <th>Residential</th>
+        <th>Location Type</th>
+        <th>State</th>
+        <th>Majors</th>
+        <th>Sports</th>
+    </tr>
+    </thead><tbody>
         {% for school in schools %}
             <tr>
-                <td><em>{{school.title}}</em></td>
                 <td>{{school.name}}</td>
-                <td>{{school.is_four_year}}</td>
-                <td>{{school.is_public}}</td>
+                <td>{% if school.is_four_year %}
+                    Four Year
+                  {% else %}
+                    Two Year
+                  {% endif %}
+                </td>
+                <td>{% if school.is_public %}
+                    Public 
+                  {% else %}
+                    Private
+                  {% endif %}
+                </td>
+                <td>{{school.school_size}}</td>
+                <td>{% if school.school_gender == 1 %}
+                    Co-ed
+                  {% elif school.school_gender == 2 %}
+                    All Girls
+                  {% elif school.school_gender == 3 %}
+                    All Boys
+                  {% endif %}
+                </td>
+                <td>
+                  {% if school.is_residential %}
+                    Residential
+                  {% else %}
+                    Commuter
+                  {% endif %}
+                </td>
+                <td>{% if school.location_type == 1 %}
+                    Rural
+                  {% elif school.location_type == 2 %}
+                    Urban
+                  {% elif school.location_type == 3 %}
+                    Suburban
+                  {% endif %}
+                </td>
+                <td>{{school.location_state}}</td>      
+                <td>
+                  {% for major in school.majors.all %}
+                    {{major.name}}<br>
+                  {% endfor %}
+                </td>
+                <td>
+                  {% for sport in school.sports.all %}
+                    {{sport.name}}<br>
+                  {% endfor %}
+                </td>
             </tr>
         {% endfor %}
-
+        </tbody>
+</table>
+<br>
 {% endblock %}
